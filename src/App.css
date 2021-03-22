@@ -1,0 +1,295 @@
+*{
+  font-family: Germania One;
+}
+
+a {
+  color: #d5d6d4;
+}
+
+address {
+  height:10vh;
+  width:25vw;
+  font-size: 1vw;
+}
+
+.arrows {
+  margin: 5vh;
+  padding: 2vmax;
+  text-align: center;
+}
+
+#bigLogo {
+  width: 80%;
+}
+
+#blogCard {
+  padding: 2rem;
+  font-size: x-large;
+}
+.blogList {
+  color: whitesmoke;
+  font-family: Germania One;
+  height: 10vh;
+  word-wrap: break-word;
+  padding: 3vmax;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Satisfy;
+  background-repeat: no-repeat;
+  /* margin-top: 15vh  ;
+  margin-bottom: 15vh; */
+  padding: 10 auto;
+  text-align: center;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.3)
+  ),
+   url('./assests/kayak_1.jpg');
+  background-size: cover;
+  background-attachment: scroll;
+  /* background-color: teal; */
+  /* background-image: url('./assests/kayak_1.jpg');
+  background-size: cover;
+  background-attachment: scroll; */
+  height: 80vh;
+}
+
+button {
+  height: 5vh;
+  width: 10vw; 
+  
+}
+
+.card {
+  background-color: black;
+  border: 2px solid grey;
+  color: whitesmoke;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-overflow: ellipsis;
+  padding: 3 vmax;
+  width: 15vw;
+  height: 20vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#dropdown-item-button {
+  width: 90%;
+  height: auto;
+}
+figcaption {
+  font-size: 5vh;
+  color: black;
+  text-shadow: 1px 0px #f0f0f0, 0px 1px #f0f0f0, -1px 0px #f0f0f0, 0px -1px #f0f0f0;
+}
+
+#footer {
+  background-color: #242020;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  width: 99.5vw;
+  border-top: ridge .6vmax #f0f0f0;
+  border-right: ridge .6vmax #f0f0f0;
+  font-family: Germania One;
+  position: relative;
+  z-index: 5;
+}
+
+h1 {
+  color: black;
+  text-shadow: 1px 0px #f0f0f0, 0px 1px #f0f0f0, -1px 0px #f0f0f0, 0px -1px #f0f0f0;
+  text-decoration: underline ;
+}
+
+h2 {
+  margin: 3vmax;
+  padding: 3vmax;
+  color: white;
+  text-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;
+}
+
+h3 {
+  color: black;
+  text-shadow: 1px 0px #f0f0f0, 0px 1px #f0f0f0, -1px 0px #f0f0f0, 0px -1px #f0f0f0;
+}
+
+header {
+  background-color: #242020;
+  color: #f0f0f0;
+  height: 10vh;
+  width: 99vw;
+  display: flex;
+  justify-content:right;
+  border-bottom: ridge 1vmax #f0f0f0;
+  border-right: ridge 1vmax #f0f0f0;
+  left: 0;
+  top: 0;
+  padding-bottom: 3%;
+  z-index: 5;
+}
+
+#headshot {
+  height:auto;
+  width:50vw;
+  text-align: right;
+  margin: 20;
+  border-bottom: ridge .6vmax #f0f0f0;
+  border-right: ridge .6vmax #f0f0f0;
+  border-top: ridge .6vmax #f0f0f0;
+  border-left: ridge .6vmax #f0f0f0;
+  /* border-bottom-right-radius: 3vmax;
+  border-bottom-left-radius: 6vmax;
+  border-top-right-radius: 6vmax;
+  border-top-left-radius: 3vmax; */
+}
+
+/* img {
+  height: 8vh;
+  width: 15vw;
+} */
+
+
+legend {
+  font-size: 4vw;
+   color: white;
+   text-shadow: .1vmax 0 black, 0 .1vmax black, -.1vmax 0 black, 0 -.1vmax black; 
+}
+
+li {
+  color: black;
+  list-style-type: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  /* background-image: linear-gradient(
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.3)
+  ),
+   url('./assests/kayak_1.jpg');
+  background-size: cover;
+  background-attachment: scroll; */
+  height: 80vh;
+  padding-top: 10vh;
+  /* margin-bottom: 10vh; */
+  overflow: scroll;
+}
+
+nav {
+  margin: 3% 3%;
+  font-size: 4vw;
+  font-family: Germania One;
+}
+
+.navLink {
+  color: #f0f0f0;
+}
+
+p {
+  font-size: 2vw;
+  color: white;
+  text-shadow: .1vmax 0 black, 0 .1vmax black, -.1vmax 0 black, 0 -.1vmax black;
+  margin: 1vmax;
+  padding:1vmax;
+  border: solid .2vmax black;
+  border-radius: 3vmax;
+}
+
+.project {
+margin-bottom: 5;
+}
+
+#projectCard{
+  padding:2rem;
+  font-size: x-large;
+}
+
+.projImg {
+  height: 40vh;
+  width: 50vw;
+  border: ridge black .5vw;
+}
+
+.projectList {
+  color: black;
+  font-family: Germania One;
+  height: 10vh;
+}
+
+.react-icons {
+  color: blue;
+  width: 2em;
+  height: 2em;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+  z-index: 1;
+  height: 1px;
+  margin: 0px;
+}
+
+.slide_active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  z-index: 5;
+  margin: 5vmax;
+}
+
+.slides {
+  height: auto;
+  width: 90%;
+  object-fit: contain;
+  margin: 10 auto;
+  padding: 10 auto;
+  border: 2px solid black;
+}
+
+.socialMedia {
+  height: 8vh;
+  width: 15vw;
+  margin: 10;
+  border-radius: 5vmax;
+  border: solid .5vmax #f0f0f0;
+  background-color: #f0f0f0;
+}
+
+ul {
+  list-style-type: none;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,25 +19,39 @@ const Project = (props) => {
         return(
             <Container>
                 <IconContext.Provider value={ {className:'react-icons'} }>
-                    <Row>
-                        <Link to={`/Project/${prevProject}`}><FaArrowAltCircleLeft/></Link>
-                        <h1>{props.title}</h1>
-                        <Link to={`/Project/${nextProject}`}><FaArrowAltCircleRight/></Link>
+                    <Row xs={1} md={1} lg={1} style={{width:'90%'}}>
+                        <Col>
+                            <Link to={`/Project/${prevProject}`}><FaArrowAltCircleLeft/></Link>
+                        </Col>
+                        <Col>
+                            <h1>{props.title}</h1>
+                        </Col>
+                        <Col>
+                            <Link to={`/Project/${nextProject}`}><FaArrowAltCircleRight/></Link>
+                        </Col>
                     </Row>
-                    <Row>
-                        <a href={props.link} target="_blank"><img src={props.image} className="projImg"/></a>
+                    <Row xs={12} style={{width:'90%'}}>
+                        <Col>
+                            <a href={props.link} target="_blank"><img src={props.image} className="projImg"/></a>
+                        </Col>
                     </Row>
-                    <Row>
-                        <p>{props.synopsis}</p>
+                    <Row xs={12} style={{width:'90%'}}>
+                        <Col>
+                            <p>{props.synopsis}</p>
+                        </Col>
                     </Row>
-                    <Row>
-                        <p>{props.technologies}</p>
+                    <Row xs={12} style={{width:'90%'}}>
+                        <Col>
+                            <p>{props.technologies}</p>
+                        </Col>
                     </Row>  
                 </IconContext.Provider>
-                <Row>
-                    <Button>
-                        <Link to="/Projects">Back to the Projects</Link>
-                    </Button>
+                <Row style={{width:'90%'}}>
+                    <Col>
+                        <Button>
+                            <Link to="/Projects">Back to the Projects</Link>
+                        </Button>
+                    </Col>
                 </Row>
             </Container>
         )

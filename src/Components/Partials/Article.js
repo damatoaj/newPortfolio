@@ -14,9 +14,10 @@ const Article = (props) => {
 
     const nextArticle = (id  === length ? 1 : id + 1);
     const prevArticle = (id === 1 ? length : id - 1);
-
-    // console.log(nextArticle)
-    // console.log(prevArticle)
+    console.log(props)
+    // let paragraphs = props.content.map((para) => {
+    //     return <p>{para}</p>
+    // })
     
         return(
             <Container>

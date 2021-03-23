@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import BigLogo from "../../assests/Authur-logo-big.png";
 import DropdownButton from 'react-bootstrap/DropdownButton'
-import { Dropdown } from 'bootstrap';
+import Dropdown  from 'react-bootstrap/Dropdown';
 
 
 const About = (props) => {
@@ -22,9 +22,9 @@ const About = (props) => {
                     </Col>
                     <Col></Col>
                 </Row>
-                <Row>
-                        <DropdownButton id="dropdown-item-button" title="About Me" block>
-                            <Dropdown.ItemText>
+                <Row style={{width:'100%'}}>
+                        <DropdownButton id="dropdown-item-button" title="About Me">
+                            <Dropdown.ItemText id="aboutMe">
                                 An experienced educator and coach, 
                                 I bring collaborative leadership to my teams by facilitating direct communication, managing goals/expectations, and being process oriented. 
                                 With my background in kinesiology and philosophy, I am equipped with critical thinking and problem solving skills, which deliver excellent outcomes for clients and teammates.

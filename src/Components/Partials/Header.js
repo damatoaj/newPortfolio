@@ -8,7 +8,7 @@ import { Nav } from 'react-bootstrap';
 const Header = (props) => {
         return(
             <Navbar bg="dark" varient="dark" expand="lg">
-                <Nav.Link href='/'>Home Page</Nav.Link>{' | '}
+                {/* <Nav.Link href='/'>Home Page</Nav.Link>{' | '} */}
                 {/* <Nav.Link href='/About_Me'>About Me</Nav.Link>{' | '} */}
                 <Nav.Link href='/Blog'>Blog</Nav.Link>{' | '}
                 <Nav.Link href='/Projects'>My Projects</Nav.Link>{' | '}

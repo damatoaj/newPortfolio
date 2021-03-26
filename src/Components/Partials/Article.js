@@ -41,7 +41,14 @@ const Article = (props) => {
                 </Row>
                 </IconContext.Provider>
                 <Row>
-                    <Button variant="outline-dark" size="lg" block><Link to="/Blog">Back to the Blogs</Link></Button>
+                    <Button variant="outline-dark" size="lg" block>
+                        <Link 
+                            to="/Blog" 
+                            id="articleLink"
+                        >
+                            Back to the Blogs
+                        </Link>
+                    </Button>
                 </Row>
             </Container>
         )

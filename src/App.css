@@ -3,7 +3,7 @@
 }
 
 a {
-  color: #d5d6d4;
+  color: white;
 }
 
 #aboutMe {
@@ -26,6 +26,14 @@ address {
   text-align: center;
 }
 
+#articleLink {
+  color:black;
+}
+
+#articleLink:hover {
+  color:blue;
+}
+
 #bigLogo {
   width: 80%;
 }
@@ -33,7 +41,17 @@ address {
 #blogCard {
   padding: 2rem;
   font-size: x-large;
+  border-radius: 4rem;
 }
+
+#blogLink {
+  color:black;
+}
+
+#blogLink:hover {
+  color:blue;
+}
+
 .blogList {
   color: whitesmoke;
   font-family: Germania One;
@@ -45,10 +63,7 @@ address {
 body {
   height: 100vh;
   width: 100vw;
-  font-family: Satisfy;
   background-repeat: no-repeat;
-  /* margin-top: 15vh  ;
-  margin-bottom: 15vh; */
   padding: 10 auto;
   text-align: center;
   z-index: 3;
@@ -60,18 +75,18 @@ body {
   ),
    url('./assests/kayak_1.jpg');
   background-size: cover;
-  background-attachment: scroll;
-  /* background-color: teal; */
-  /* background-image: url('./assests/kayak_1.jpg');
-  background-size: cover;
-  background-attachment: scroll; */
-  height: 80vh;
+  /* background-attachment: scroll; */
 }
 
 button {
-  height: 5vh;
-  width: 10vw; 
-  
+  height: 7vh;
+  width: 12vw; 
+  color: black;
+}
+
+button:hover {
+  height: 9vh;
+  width: 15vw;
 }
 
 .card {
@@ -95,13 +110,24 @@ button {
 }
 
 #dropdown-item-button {
-  width: 90%;
-  height: 5rem;
+  width: 50%;
+  height: 3rem;
   font-size: 2rem;
   padding: .5rem;
   margin-bottom: 3.5rem;
   margin-top: 2rem;
+  border-radius: 2rem;
 }
+
+#dropdown-item-button:hover {
+  width: 70%;
+  height: 5rem;
+  padding: .5rem;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
 figcaption {
   font-size: 5vh;
   color: black;
@@ -114,13 +140,11 @@ figcaption {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  width: 99.5vw;
-  border-top: ridge .6vmax #f0f0f0;
-  border-right: ridge .6vmax #f0f0f0;
+  width: 100vw;
   font-family: Germania One;
   position: relative;
   z-index: 5;
+  padding: 1rem;
 }
 
 h1 {
@@ -156,6 +180,16 @@ header {
   z-index: 5;
 }
 
+.headerLink{
+  font-size: 10vw;
+  color: white;
+}
+
+.headerLink:hover {
+  font-size: 12vw;
+  color:red;
+}
+
 #headshot {
   height:auto;
   width:50vw;
@@ -165,10 +199,16 @@ header {
   border-right: ridge .6vmax #f0f0f0;
   border-top: ridge .6vmax #f0f0f0;
   border-left: ridge .6vmax #f0f0f0;
-  /* border-bottom-right-radius: 3vmax;
-  border-bottom-left-radius: 6vmax;
-  border-top-right-radius: 6vmax;
-  border-top-left-radius: 3vmax; */
+}
+
+#headshot:hover {
+  height:auto;
+  width:70vw;
+  margin: 10;
+  border-bottom: ridge .6vmax #f0f0f0;
+  border-right: ridge .6vmax #f0f0f0;
+  border-top: ridge .6vmax #f0f0f0;
+  border-left: ridge .6vmax #f0f0f0;
 }
 
 /* img {
@@ -186,6 +226,7 @@ legend {
 li {
   color: black;
   list-style-type: none;
+  padding: .5rem;
 }
 
 main {
@@ -228,15 +269,34 @@ p {
 margin-bottom: 5;
 }
 
+#projectButton {
+  width: 16vw;
+}
+
+#projectButton:hover {
+  width: 20vw;
+}
+
 #projectCard{
   padding:2rem;
   font-size: x-large;
+  border-radius: 4rem;
 }
 
 .projImg {
   height: 40vh;
   width: 50vw;
   border: ridge black .5vw;
+}
+
+#projectLink {
+  color:black;
+  width: 10vw;
+}
+
+#projectLink:hover {
+  color:blue;
+  width: 16vw;
 }
 
 .projectList {

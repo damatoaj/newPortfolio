@@ -12,15 +12,18 @@ const Projects = (props) => {
             return ( 
                 <ListGroup key={project.id} >
                     <ListGroup.Item>
-                        <Card id="projectCard" style={{ width:'18rem' }} >
+                        <Card id="projectCard" style={{ width:'15rem' }} >
                             <Card.Title>
                                 {project.title}
                             </Card.Title>
                             <Card.Text>
 
                             </Card.Text>
-                            <Button variant="primary">
-                                <Link to={`/Project/${project.id}`}>
+                            <Button variant="primary" id="projectButton">
+                                <Link 
+                                    to={`/Project/${project.id}`}
+                                    id="projectLink"
+                                >
                                     More Details
                                 </Link>
                             </Button>

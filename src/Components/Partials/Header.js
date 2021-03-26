@@ -10,8 +10,8 @@ const Header = (props) => {
             <Navbar bg="dark" varient="dark" expand="lg">
                 {/* <Nav.Link href='/'>Home Page</Nav.Link>{' | '} */}
                 {/* <Nav.Link href='/About_Me'>About Me</Nav.Link>{' | '} */}
-                <Nav.Link href='/Blog'>Blog</Nav.Link>{' | '}
-                <Nav.Link href='/Projects'>My Projects</Nav.Link>{' | '}
+                <Nav.Link className="headerLink" href='/Blog'>Blog</Nav.Link>{' | '}
+                <Nav.Link className="headerLink" href='/Projects'>My Projects</Nav.Link>{' | '}
                 {/* <Nav.Link href="/Music">My Music</Nav.Link> */}
             </Navbar>
         )

@@ -17,7 +17,12 @@ const Blog = (props) => {
                                 {blog.title}
                             </Card.Title>
                             <Button variant="primary">
-                                <Link to={`/Article/${blog.id}`}> See Full Text </Link>
+                                <Link 
+                                    to={`/Article/${blog.id}`}
+                                    id="blogLink"
+                                > 
+                                    See Full Text 
+                                </Link>
                             </Button>
                         </Card>
                     </ListGroup.Item>

@@ -75,7 +75,6 @@ body {
   ),
    url('./assests/kayak_1.jpg');
   background-size: cover;
-  /* background-attachment: scroll; */
 }
 
 button {
@@ -149,8 +148,10 @@ figcaption {
 
 h1 {
   color: black;
-  text-shadow: 1px 0px #f0f0f0, 0px 1px #f0f0f0, -1px 0px #f0f0f0, 0px -1px #f0f0f0;
   text-decoration: underline ;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 3rem;
 }
 
 h2 {
@@ -183,11 +184,12 @@ header {
 .headerLink{
   font-size: 10vw;
   color: white;
+  text-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;
 }
 
 .headerLink:hover {
   font-size: 12vw;
-  color:red;
+  color:blue;
 }
 
 #headshot {
@@ -240,7 +242,8 @@ main {
   background-size: cover;
   background-attachment: scroll; */
   height: 80vh;
-  padding-top: 10vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   /* margin-bottom: 10vh; */
   overflow: scroll;
 }
@@ -263,17 +266,20 @@ p {
   padding:1vmax;
   border: solid .2vmax black;
   border-radius: 3vmax;
+  background-color: black;
 }
 
 .project {
 margin-bottom: 5;
 }
 
-#projectButton {
+.projectButton {
   width: 16vw;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
 }
 
-#projectButton:hover {
+.projectButton:hover {
   width: 20vw;
 }
 
@@ -289,12 +295,12 @@ margin-bottom: 5;
   border: ridge black .5vw;
 }
 
-#projectLink {
+.projectLink {
   color:black;
   width: 10vw;
 }
 
-#projectLink:hover {
+.projectLink:hover {
   color:blue;
   width: 16vw;
 }

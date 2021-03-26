@@ -19,10 +19,10 @@ const Projects = (props) => {
                             <Card.Text>
 
                             </Card.Text>
-                            <Button variant="primary" id="projectButton">
+                            <Button variant="primary" className="projectButton">
                                 <Link 
                                     to={`/Project/${project.id}`}
-                                    id="projectLink"
+                                    className="projectLink"
                                 >
                                     More Details
                                 </Link>

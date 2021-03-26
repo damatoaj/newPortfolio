@@ -16,7 +16,10 @@ const Blog = (props) => {
                             <Card.Title>
                                 {blog.title}
                             </Card.Title>
-                            <Button variant="primary">
+                            <Card.Text>
+                                
+                            </Card.Text>
+                            <Button variant="primary" className="projectButton">
                                 <Link 
                                     to={`/Article/${blog.id}`}
                                     id="blogLink"
@@ -35,7 +38,9 @@ const Blog = (props) => {
                     <h1>Writing has always been a passion of mine, hopefully you'll enjoy my musings on philosophy and recreation</h1>    
                 </Row>
                 <Row>
-                    {blogList}   
+                    <Col sm={1} md={2} lg={3}>
+                        {blogList}   
+                    </Col>
                 </Row>
             </Container>
         )

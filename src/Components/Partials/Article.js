@@ -15,9 +15,6 @@ const Article = (props) => {
     const nextArticle = (id  === length ? 1 : id + 1);
     const prevArticle = (id === 1 ? length : id - 1);
     console.log(props)
-    // let paragraphs = props.content.map((para) => {
-    //     return <p>{para}</p>
-    // })
     
         return(
             <Container>
@@ -37,19 +34,19 @@ const Article = (props) => {
                     <p>{props.content}</p>
                 </Row>
                 <Row>
-                    <h3>{props.publication_date}</h3>
+                    <h2>Published: {props.publication_date}</h2>
                 </Row>
-                </IconContext.Provider>
                 <Row>
-                    <Button variant="outline-dark" size="lg" block>
+                    <Button variant="outline-dark" size="lg" className="projectButton">
                         <Link 
                             to="/Blog" 
                             id="articleLink"
-                        >
+                            >
                             Back to the Blogs
                         </Link>
                     </Button>
                 </Row>
+                </IconContext.Provider>
             </Container>
         )
 }

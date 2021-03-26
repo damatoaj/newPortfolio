@@ -48,8 +48,8 @@ const Project = (props) => {
                 </IconContext.Provider>
                 <Row style={{width:'90%'}}>
                     <Col>
-                        <Button>
-                            <Link to="/Projects">Back to the Projects</Link>
+                        <Button className="projectButton">
+                            <Link to="/Projects" className="projectLink">Back to the Projects</Link>
                         </Button>
                     </Col>
                 </Row>

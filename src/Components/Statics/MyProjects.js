@@ -29,7 +29,7 @@ const MyProjects = [
         synopsis: 'This app allows users to search fro songs from the Spotify API and then save them into playlists.',
         image: '/images/spotifwhy.png',
         technologies: 'MongoDB, React, Node.js, Express, Bcrypt',
-        link: 'https://arthur-spotify-playlist-projec.herokuapp.com/'
+        link: 'https://spotify-project.netlify.app/'
     }
 ]
 

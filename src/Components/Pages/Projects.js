@@ -36,7 +36,7 @@ const Projects = (props) => {
             <Container>
                 <Row>
                     <Col>
-                        <h2>These are my projects from my General Assembly software immersive bootcamp</h2>
+                        <h1>These are my projects from my General Assembly software immersive bootcamp</h1>
                     </Col>
                 </Row>
                 <Row>

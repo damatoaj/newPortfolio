@@ -10,6 +10,7 @@ import musicFiles from './Components/Statics/Music';
 
 import Header from './Components/Partials/Header';
 import Footer from './Components/Partials/Footer';
+import Contact from './Components/Partials/Contact';
 import Article from './Components/Partials/Article';
 import Project from './Components/Partials/Project';
 import Homepage from './Components/Pages/Homepage';
@@ -28,6 +29,7 @@ const App = () => {
             path='/' 
             render={()=> < About /> } 
           />
+          
           <Route 
             path='/Projects' 
             render={() => <Homepage slides={SlideShow} />}
@@ -68,6 +70,10 @@ const App = () => {
               return <Project {...props} />
             }
             }/>
+        <Route
+          path='/Contact'
+          render={() =>  <Contact/>}
+        />
         </main>
         <Footer />
       </Router>

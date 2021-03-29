@@ -10,57 +10,59 @@ const Contact = (props) => {
 
     let sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_hdvtw0d', 'template_m329e48', e.Target,  
-            'user_SrWZljC6NSLBG1dPd91JE')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            })
-            e.target.reset()
+        emailjs.sendForm('service_hdvtw0d', 'template_m329e48', e.target, 'user_SrWZljC6NSLBG1dPd91JE')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        })
+        e.target.reset()
     }
 
     return(
         <Container>
-            <Form>
+            <Form onSubmit={sendEmail}>
                 <Form.Label>Interested in working together? Contact Me Below</Form.Label>
                 <Form.Group>
+                    <Form.Label htmlFor="name">Name</Form.Label>
                     <Form.Control 
                         name="name"
                         type="text"
                         size="md"
-                        placeholder="Name"
+                        id="name"
                     />
                 </Form.Group>
                 <Form.Group>
+                    <Form.Label htmlFor="email">Email</Form.Label>
                     <Form.Control 
                         name="email"
                         type="email"
                         size="md"
-                        placeholder="Email" 
+                        id="email"
                     />
                 </Form.Group>
                 <Form.Group>
+                    <Form.Label htmlFor="subject">Subject</Form.Label>
                     <Form.Control 
                         name="subject"
                         type="text"
                         size="lg"
-                        placeholder="Subject" 
+                        id="subject"
                     />
                 </Form.Group>
                 <Form.Group>
+                    <Form.Label htmlFor="message">Message</Form.Label>
                     <Form.Control 
                         name="message"
                         as="textarea"
                         rows={4}
-                        placeholder="Message" 
+                        id="message"
                     />
                 </Form.Group>
                 <Button 
-                    varient="primary"
+                    variant="primary"
                     type="submit"
-                    onClick={sendEmail}
+                    active
                 >
                     Submit
                 </Button>

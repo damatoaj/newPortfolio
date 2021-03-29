@@ -102,6 +102,12 @@ button:hover {
   height: 20vh;
 }
 
+#contact {
+  background-color: slategray;
+  padding: 1rem;
+  border-radius: .5rem;
+  width: 50%;
+}
 .container {
   display: flex;
   flex-wrap: wrap;

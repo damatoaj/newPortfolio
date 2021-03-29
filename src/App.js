@@ -70,10 +70,7 @@ const App = () => {
               return <Project {...props} />
             }
             }/>
-        <Route
-          path='/Contact'
-          render={() =>  <Contact/>}
-        />
+        <Contact />
         </main>
         <Footer />
       </Router>

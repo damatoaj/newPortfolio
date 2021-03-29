@@ -19,13 +19,15 @@ const Contact = (props) => {
         e.target.reset()
     }
 
-    return(
+    return( 
         <Container>
-            <Form onSubmit={sendEmail}>
+
+            <Form onSubmit={sendEmail} id="contact">
                 <Form.Label>Interested in working together? Contact Me Below</Form.Label>
                 <Form.Group>
-                    <Form.Label htmlFor="name">Name</Form.Label>
+                    <Form.Label htmlFor="name">Name: </Form.Label>
                     <Form.Control 
+                        style={{width:'70%'}}
                         name="name"
                         type="text"
                         size="md"
@@ -33,8 +35,9 @@ const Contact = (props) => {
                     />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label htmlFor="email">Email</Form.Label>
+                    <Form.Label htmlFor="email">Email: </Form.Label>
                     <Form.Control 
+                        style={{width:'70%'}}
                         name="email"
                         type="email"
                         size="md"
@@ -42,8 +45,9 @@ const Contact = (props) => {
                     />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label htmlFor="subject">Subject</Form.Label>
+                    <Form.Label htmlFor="subject">Subject: </Form.Label>
                     <Form.Control 
+                        style={{width:'70%'}}
                         name="subject"
                         type="text"
                         size="lg"
@@ -51,8 +55,9 @@ const Contact = (props) => {
                     />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label htmlFor="message">Message</Form.Label>
+                    <Form.Label htmlFor="message">Message: </Form.Label>
                     <Form.Control 
+                        style={{width:'70%'}}
                         name="message"
                         as="textarea"
                         rows={4}
@@ -60,6 +65,7 @@ const Contact = (props) => {
                     />
                 </Form.Group>
                 <Button 
+                    className="projectButton"
                     variant="primary"
                     type="submit"
                     active

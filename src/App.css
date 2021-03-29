@@ -107,6 +107,8 @@ button:hover {
   padding: 1rem;
   border-radius: .5rem;
   width: 50%;
+  text-align: left;
+  letter-spacing: .1rem;
 }
 .container {
   display: flex;
@@ -265,7 +267,7 @@ nav {
 }
 
 p {
-  font-size: 2vw;
+  font-size: 3vw;
   color: white;
   text-shadow: .1vmax 0 black, 0 .1vmax black, -.1vmax 0 black, 0 -.1vmax black;
   margin: 1vmax;

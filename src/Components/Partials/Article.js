@@ -36,7 +36,7 @@ const Article = (props) => {
                 <Row>
                     <h2>Published: {props.publication_date}</h2>
                 </Row>
-                <Row>
+                <Row style={{width:'90%'}}>
                     <Button variant="outline-dark" size="lg" className="projectButton">
                         <Link 
                             to="/Blog" 

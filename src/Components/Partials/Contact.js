@@ -23,41 +23,53 @@ const Contact = (props) => {
         <Container>
 
             <Form onSubmit={sendEmail} id="contact">
-                <Form.Label>Interested in working together? Contact Me Below</Form.Label>
+                <Form.Label>Contact Me Below</Form.Label>
                 <Form.Group>
-                    <Form.Label htmlFor="name">Name: </Form.Label>
-                    <Form.Control 
-                        style={{width:'70%'}}
-                        name="name"
-                        type="text"
-                        size="md"
-                        id="name"
-                    />
+                    <Row>
+                        <Form.Label htmlFor="name">Name: </Form.Label>
+                    </Row>
+                    <Row>
+                        <Form.Control 
+                            style={{width:'100%'}}
+                            name="name"
+                            type="text"
+                            size="md"
+                            id="name"
+                        />
+                    </Row>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label htmlFor="email">Email: </Form.Label>
-                    <Form.Control 
-                        style={{width:'70%'}}
-                        name="email"
-                        type="email"
-                        size="md"
-                        id="email"
-                    />
+                    <Row>
+                        <Form.Label htmlFor="email">Email: </Form.Label>
+                    </Row>
+                    <Row>
+                        <Form.Control 
+                            style={{width:'100%'}}
+                            name="email"
+                            type="email"
+                            size="md"
+                            id="email"
+                        />
+                    </Row>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label htmlFor="subject">Subject: </Form.Label>
-                    <Form.Control 
-                        style={{width:'70%'}}
-                        name="subject"
-                        type="text"
-                        size="lg"
-                        id="subject"
-                    />
+                    <Row>
+                        <Form.Label htmlFor="subject">Subject: </Form.Label>
+                    </Row>
+                    <Row>
+                        <Form.Control 
+                            style={{width:'100%'}}
+                            name="subject"
+                            type="text"
+                            size="lg"
+                            id="subject"
+                        />
+                    </Row>
                 </Form.Group>
                 <Form.Group>
                     <Form.Label htmlFor="message">Message: </Form.Label>
                     <Form.Control 
-                        style={{width:'70%'}}
+                        style={{width:'100%'}}
                         name="message"
                         as="textarea"
                         rows={4}

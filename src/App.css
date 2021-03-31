@@ -158,7 +158,7 @@ figcaption {
 
 #footer {
   background-color: #03242020;
-  color: #gainsboro;
+  color: gainsboro;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

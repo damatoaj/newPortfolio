@@ -206,6 +206,7 @@ header {
 
 .headerLink{
   border-right: .5rem solid gainsboro;
+  text-decoration: none;
   padding-left: .5rem;
   padding-right: .5rem;
   font-size: 10vw;

@@ -33,6 +33,7 @@ const Footer = (props) => {
                             <Image className="socialMedia" src="/images/wordpress_logo.svg"  />
                         </a>
                     </Col>
+                    
             </Container>
         )  
 }

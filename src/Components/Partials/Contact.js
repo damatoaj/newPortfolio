@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Contact = (props) => {
 
@@ -21,70 +22,69 @@ const Contact = (props) => {
 
     return( 
         <Container>
-
-            <Form onSubmit={sendEmail} id="contact">
-                <Form.Label>Contact Me Below</Form.Label>
-                <Form.Group>
-                    <Row>
-                        <Form.Label htmlFor="name">Name: </Form.Label>
-                    </Row>
-                    <Row>
+                <Form onSubmit={sendEmail} id="contact">
+                    <Form.Label>Contact Me Below</Form.Label>
+                    <Form.Group>
+                        <Row>
+                            <Form.Label htmlFor="name">Name: </Form.Label>
+                        </Row>
+                        <Row>
+                            <Form.Control 
+                                style={{width:'100%'}}
+                                name="name"
+                                type="text"
+                                size="md"
+                                id="name"
+                            />
+                        </Row>
+                    </Form.Group>
+                    <Form.Group>
+                        <Row>
+                            <Form.Label htmlFor="email">Email: </Form.Label>
+                        </Row>
+                        <Row>
+                            <Form.Control 
+                                style={{width:'100%'}}
+                                name="email"
+                                type="email"
+                                size="md"
+                                id="email"
+                            />
+                        </Row>
+                    </Form.Group>
+                    <Form.Group>
+                        <Row>
+                            <Form.Label htmlFor="subject">Subject: </Form.Label>
+                        </Row>
+                        <Row>
+                            <Form.Control 
+                                style={{width:'100%'}}
+                                name="subject"
+                                type="text"
+                                size="lg"
+                                id="subject"
+                            />
+                        </Row>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label htmlFor="message">Message: </Form.Label>
                         <Form.Control 
                             style={{width:'100%'}}
-                            name="name"
-                            type="text"
-                            size="md"
-                            id="name"
+                            name="message"
+                            as="textarea"
+                            rows={4}
+                            id="message"
                         />
-                    </Row>
-                </Form.Group>
-                <Form.Group>
-                    <Row>
-                        <Form.Label htmlFor="email">Email: </Form.Label>
-                    </Row>
-                    <Row>
-                        <Form.Control 
-                            style={{width:'100%'}}
-                            name="email"
-                            type="email"
-                            size="md"
-                            id="email"
-                        />
-                    </Row>
-                </Form.Group>
-                <Form.Group>
-                    <Row>
-                        <Form.Label htmlFor="subject">Subject: </Form.Label>
-                    </Row>
-                    <Row>
-                        <Form.Control 
-                            style={{width:'100%'}}
-                            name="subject"
-                            type="text"
-                            size="lg"
-                            id="subject"
-                        />
-                    </Row>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label htmlFor="message">Message: </Form.Label>
-                    <Form.Control 
-                        style={{width:'100%'}}
-                        name="message"
-                        as="textarea"
-                        rows={4}
-                        id="message"
-                    />
-                </Form.Group>
-                <Button 
-                    className="projectButton"
-                    variant="primary"
-                    type="submit"
-                    active
-                >
-                    Submit
-                </Button>
-            </Form>
+                    </Form.Group>
+                    <Button 
+                        className="projectButton"
+                        variant="primary"
+                        type="submit"
+                        active
+                    >
+                        Submit
+                    </Button>
+                </Form>
         </Container>
     )
 }

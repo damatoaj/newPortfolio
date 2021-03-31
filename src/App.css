@@ -3,15 +3,20 @@
 }
 
 a {
-  color: white;
+  color: gainsboro;
 }
 
 #aboutMe {
   margin: 2rem;
-  color: white;
+  color: gainsboro;
   background-color: black;
   padding: .5vw;
-  width: 10vw;
+  width: 90%;
+  box-shadow: 
+  .5rem .5rem .5rem gainsboro, 
+  .5rem -.5rem .5rem gainsboro,
+  -.5rem .5rem .5rem gainsboro,
+  -.5rem -.5rem .5rem gainsboro;
 }
 
 address {
@@ -31,17 +36,27 @@ address {
 }
 
 #articleLink:hover {
-  color:blue;
+  color:slategray;
 }
 
 #bigLogo {
   width: 80%;
 }
 
+#blog {
+  white-space: pre-wrap;
+}
+
 #blogCard {
   padding: 2rem;
   font-size: x-large;
   border-radius: 4rem;
+  text-overflow: ellipsis;
+  box-shadow: 
+    .5rem .5rem .5rem gainsboro, 
+    .5rem -.5rem .5rem gainsboro,
+    -.5rem .5rem .5rem gainsboro,
+    -.5rem -.5rem .5rem gainsboro;
 }
 
 #blogLink {
@@ -49,11 +64,11 @@ address {
 }
 
 #blogLink:hover {
-  color:blue;
+  color:slategray;
 }
 
 .blogList {
-  color: whitesmoke;
+  color: gainsboro;
   font-family: Germania One;
   height: 10vh;
   word-wrap: break-word;
@@ -70,10 +85,10 @@ body {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(
-    rgba(0,0,0,0.3),
-    rgba(0,0,0,0.3)
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0)
   ),
-   url('./assests/kayak_1.jpg');
+   url('./assests/nordicpeak.jpg');
   background-size: cover;
 }
 
@@ -91,13 +106,13 @@ button:hover {
 .card {
   background-color: black;
   border: 2px solid grey;
-  color: whitesmoke;
+  color: gainsboro;
   margin-bottom: 5vh;
   margin-top: 5vh;
   margin-left: 5vw;
   margin-right: 5vw;
   text-overflow: ellipsis;
-  padding: 3 vmax;
+  padding: 3vmax;
   width: 15vw;
   height: 20vh;
 }
@@ -142,8 +157,8 @@ figcaption {
 }
 
 #footer {
-  background-color: #242020;
-  color: #f0f0f0;
+  background-color: #03242020;
+  color: #gainsboro;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -157,7 +172,7 @@ figcaption {
 h1 {
   color: black;
   text-decoration: underline ;
-  background-color: white;
+  background-color: gainsboro;
   padding: 2rem;
   border-radius: 3rem;
 }
@@ -165,7 +180,7 @@ h1 {
 h2 {
   margin: 3vmax;
   padding: 3vmax;
-  color: white;
+  color: gainsboro;
   text-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;
 }
 
@@ -175,8 +190,8 @@ h3 {
 }
 
 header {
-  background-color: #242020;
-  color: #f0f0f0;
+  background-color: #03242020;
+  color: gainsboro;
   height: 10vh;
   width: 99vw;
   display: flex;
@@ -190,14 +205,17 @@ header {
 }
 
 .headerLink{
+  border-right: .5rem solid gainsboro;
+  padding-left: .5rem;
+  padding-right: .5rem;
   font-size: 10vw;
-  color: white;
+  color: gainsboro;
   text-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;
 }
 
 .headerLink:hover {
   font-size: 12vw;
-  color:blue;
+  color:slategray;
 }
 
 #headshot {
@@ -221,6 +239,14 @@ header {
   border-left: ridge .6vmax #f0f0f0;
 }
 
+hr {
+  height: .5rem;
+  width: 100%;
+  background-image: url(https://www.featurepics.com/StockImage/20160414/birch-bark-texture-stock-image-4047180.jpg);
+  background-size: contain;
+  border: none;
+  margin:0;
+}
 /* img {
   height: 8vh;
   width: 15vw;
@@ -263,18 +289,19 @@ nav {
 }
 
 .navLink {
-  color: #f0f0f0;
+  color: gainsboro;
 }
 
 p {
   font-size: 3vw;
-  color: white;
+  color: gainsboro;
   text-shadow: .1vmax 0 black, 0 .1vmax black, -.1vmax 0 black, 0 -.1vmax black;
   margin: 1vmax;
   padding:1vmax;
   border: solid .2vmax black;
   border-radius: 3vmax;
-  background-color: black;
+  background-color: rgba(0, 0, 0, .4);
+  white-space: pre-wrap;
 }
 
 .project {
@@ -284,7 +311,9 @@ margin-bottom: 5;
 .projectButton {
   width: 16vw;
   border-radius: 2rem;
+  margin-top: .5rem;
   margin-bottom: 2rem;
+  border: solid .5rem gainsboro;
 }
 
 .projectButton:hover {
@@ -293,14 +322,26 @@ margin-bottom: 5;
 
 #projectCard{
   padding:2rem;
+  letter-spacing: 2rem;
   font-size: x-large;
   border-radius: 4rem;
+  box-shadow: 
+  .5rem .5rem .5rem gainsboro, 
+  .5rem -.5rem .5rem gainsboro,
+  -.5rem .5rem .5rem gainsboro,
+  -.5rem -.5rem .5rem gainsboro;
 }
 
 .projImg {
   height: 40vh;
   width: 50vw;
   border: ridge black .5vw;
+  margin: 2rem;
+  box-shadow: 
+  .5rem .5rem .5rem gainsboro, 
+  .5rem -.5rem .5rem gainsboro,
+  -.5rem .5rem .5rem gainsboro,
+  -.5rem -.5rem .5rem gainsboro;
 }
 
 .projectLink {
@@ -309,7 +350,7 @@ margin-bottom: 5;
 }
 
 .projectLink:hover {
-  color:blue;
+  color:slategray;
   width: 16vw;
 }
 
@@ -320,10 +361,10 @@ margin-bottom: 5;
 }
 
 .react-icons {
-  color: blue;
+  color: slategray;
   width: 2em;
   height: 2em;
-  background-color: white;
+  background-color: gainsboro;
   border-radius: 1rem;
 }
 
@@ -355,10 +396,11 @@ margin-bottom: 5;
 .socialMedia {
   height: 8vh;
   width: 15vw;
-  margin: 10;
-  border-radius: 5vmax;
-  border: solid .5vmax #f0f0f0;
-  background-color: #f0f0f0;
+  margin: .2rem;
+  padding: 0rem;
+  border-radius: 2vmax;
+  border: solid .5vmax gainsboro;
+  background-color: gainsboro;
 }
 
 ul {

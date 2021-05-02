@@ -23,7 +23,7 @@ const Article = (props) => {
                     <Col>
                         <Link to={`/Article/${prevArticle}`}><FaArrowAltCircleLeft id="leftArrow" /></Link>
                     </Col>
-                    <Col>
+                    <Col style={{ letterSpacing:'.3rem'}}>
                         <h1>{props.title}</h1>
                     </Col>
                     <Col>

@@ -59,6 +59,12 @@ address {
     -.5rem -.5rem .5rem gainsboro;
 }
 
+#blogColumn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 #blogLink {
   color:black;
 }
@@ -323,7 +329,6 @@ margin-bottom: 5;
 
 #projectCard{
   padding:2rem;
-  letter-spacing: 2rem;
   font-size: x-large;
   border-radius: 4rem;
   box-shadow: 
@@ -333,6 +338,11 @@ margin-bottom: 5;
   -.5rem -.5rem .5rem gainsboro;
 }
 
+#projectCol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .projImg {
   height: 40vh;
   width: 50vw;

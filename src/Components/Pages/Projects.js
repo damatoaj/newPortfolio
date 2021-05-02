@@ -13,7 +13,7 @@ const Projects = (props) => {
                 <ListGroup key={project.id} >
                     <ListGroup.Item>
                         <Card id="projectCard" style={{ width:'15rem' }} >
-                            <Card.Title style={{ letterSpacing:'1rem' }}>
+                            <Card.Title>
                                 {project.title}
                             </Card.Title>
                             <Card.Text>
@@ -40,7 +40,7 @@ const Projects = (props) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm={1} md={2} lg={3}>
+                    <Col id="projectCol">
                         {projectList}
                     </Col>
                 </Row>

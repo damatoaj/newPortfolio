@@ -23,7 +23,7 @@ const MyProjects = [
         synopsis: 'A full-stack application using a Sequel database that allows users to track their volume (heart rate multiplied by minutes), and graph the data over time.',
         image: '/images/volume_tracker.png',
         technologies: 'PostGres, HTML, CSS, JavaScript, React-Bootstrap, Recharts, Next.js, Bcrypt',
-        link: 'https://exercise-volume-tracker.vercel.app/',
+        link: 'https://cardio-volume-tracker.herokuapp.com/',
         nextSteps: ''
     },
     {

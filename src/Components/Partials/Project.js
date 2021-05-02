@@ -24,7 +24,7 @@ const Project = (props) => {
                             <Link to={`/Project/${prevProject}`}><FaArrowAltCircleLeft/></Link>
                         </Col>
                         <Col>
-                            <h1>{props.title}</h1>
+                            <h1 style={{ letterSpacing:'.3rem'}}>{props.title}</h1>
                         </Col>
                         <Col>
                             <Link to={`/Project/${nextProject}`}><FaArrowAltCircleRight/></Link>

@@ -10,7 +10,7 @@ const Footer = (props) => {
             <Container id="footer">
                     <Row>
                         <a href="https://github.com/damatoaj" target="_blank">
-                            <Image className="socialMedia" src="/images/GitHub-Logo.png" />
+                            <Image className="socialMedia" src="/images/github.svg" />
                         </a>
                         <a href="https://www.instagram.com/thundrousprophet/?hl=en" target="_blank">
                             <Image className="socialMedia" src="/images/instagram_icon.svg" />
@@ -21,8 +21,7 @@ const Footer = (props) => {
                         <a href="https://arthurdamato.wordpress.com/" target="_blank">
                             <Image className="socialMedia" src="/images/wordpress_logo.svg"  />
                         </a>
-                    </Row>
-                    
+                    </Row>    
             </Container>
         )  
 }

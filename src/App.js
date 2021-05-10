@@ -24,7 +24,7 @@ const App = () => {
     return(
       <Router>
         <Header />
-        <main>
+        
           <Route 
             path='/' 
             render={()=> < About /> } 
@@ -71,7 +71,7 @@ const App = () => {
             }
             }/>
         <Contact />
-        </main>
+        
         <Footer />
       </Router>
     )

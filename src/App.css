@@ -146,6 +146,8 @@ button {
   margin-bottom: 3.5rem;
   margin-top: 2rem;
   border-radius: 2rem;
+  background-color: gainsboro;
+  color: black;
 }
 
 /* #dropdown-item-button:hover {

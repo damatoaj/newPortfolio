@@ -39,7 +39,7 @@ const MyProjects = [
         id: 5,
         title: 'TRKR',
         synopsis: 'This app assists job hunters by syncing data across multiple job-board websites, and allows the user to store and track them all in one place.',
-        image: 'images/TRKR.png',
+        image: '/images/TRKR.png',
         technologies: 'React, GraphQL, Mongo, SQL',
         link: 'https://www.trkr.dev/',
         nextSteps: 'Fully connecting the back and front ends, and scaling for millions of users'

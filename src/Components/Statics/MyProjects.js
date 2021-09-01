@@ -29,7 +29,7 @@ const MyProjects = [
     {
         id: 4,
         title: 'Spotif-why?',
-        synopsis: 'This app allows users to search fro songs from the Spotify API and then save them into playlists.',
+        synopsis: 'This app allows users to search from songs from the Spotify API and then save them into playlists.',
         image: '/images/spotifwhy.png',
         technologies: 'MongoDB, React, Node.js, Express, Bcrypt',
         link: 'https://spotify-project.netlify.app/',

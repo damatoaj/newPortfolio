@@ -1,11 +1,9 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import {Link} from 'react-router-dom';
 
-const Footer = (props) => {
+const Footer = () => {
         return(
             <Container id="footer">
                     <Row>

@@ -19,6 +19,15 @@ a {
   -.5rem -.5rem .5rem gainsboro;
 }
 
+.activeProject {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  scroll-snap-align: start;
+
+}
 address {
   height:10vh;
   width:25vw;
@@ -132,6 +141,12 @@ button {
   text-align: left;
   letter-spacing: .1rem;
 }
+
+.contactLabel {
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -303,6 +318,11 @@ p {
 margin-bottom: 5;
 }
 
+.project.active {
+  margin-bottom: 5;
+  width: 100vh;
+  }
+
 .projectButton {
   width: 16vw;
   border-radius: 2rem;
@@ -311,12 +331,37 @@ margin-bottom: 5;
   border: solid .5rem gainsboro;
 }
 
+.projectButton:hover {
+  cursor:pointer;
+}
+
+.projectButton:active {
+  transform: translate(0,20px);
+  transition: .5s ease;
+  color: white;
+  background-color: #03242020;
+}
+
 /* .projectButton:hover {
   /* width: 20vw; */
 /* } */ 
 
 #projectCard{
   padding:2rem;
+  font-size: x-large;
+  border-radius: 4rem;
+  box-shadow: 
+  .5rem .5rem .5rem gainsboro, 
+  .5rem -.5rem .5rem gainsboro,
+  -.5rem .5rem .5rem gainsboro,
+  -.5rem -.5rem .5rem gainsboro;
+}
+
+#projectCard.active{
+  z-index: 1;
+  padding:0;
+  width: 100vh;
+  height: auto;
   font-size: x-large;
   border-radius: 4rem;
   box-shadow: 
@@ -402,11 +447,32 @@ margin-bottom: 5;
   background-color: gainsboro;
 }
 
+#standard {
+  opacity: 0;
+    transition: all .1s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+span.fade {
+  opacity: 1;
+  transform: translateY(0px);
+  color: blue;
+}
+
 ul {
   list-style-type: none;
 } 
 
+.trialDiv {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
 
+.trialDiv section {
+  scroll-snap-align: start;
+}
 
 
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
@@ -6,45 +6,40 @@ import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Project from '../Partials/Project'
+import ActiveProject from '../Partials/ActiveProject';
+import InactiveProject from '../Partials/InactiveProject';
 
-const Projects = (props) => {
-        let projectList = props.myProjects.map((project) => {
-            return ( 
-                <ListGroup key={project.id} >
-                    <ListGroup.Item>
-                        <Card id="projectCard" style={{ width:'15rem' }} >
-                            <Card.Title>
-                                {project.title}
-                            </Card.Title>
-                            <Card.Text>
+const Projects = ({myProjects}) => {
+    const [active, setActive] = useState(0);
 
-                            </Card.Text>
-                            <Button variant="primary" className="projectButton">
-                                <Link 
-                                    to={`/Project/${project.id}`}
-                                    className="projectLink"
-                                >
-                                    More Details
-                                </Link>
-                            </Button>
-                        </Card>
-                    </ListGroup.Item>
-                </ListGroup>
-            )
+    const activateProject = async (index) => {
+        await index;
+        setActive(index)
+    };
+
+    const showProject = (active, index, project) => {
+        if(active === index) {
+            return <Project project={project} />
+        } else {
+            return 'Click For Details'
+        }
+    }
+    console.log(myProjects)
+        let projectList = myProjects.map((project, index) => {
+ {
+                return <ActiveProject 
+                    project={project} 
+                    index={index} 
+                    />
+            }
         })
         return(
-            <Container>
-                <Row>
-                    <Col>
-                        <h1>These are my projects from my General Assembly software immersive bootcamp</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col id="projectCol">
-                        {projectList}
-                    </Col>
-                </Row>
-            </Container>
+            <Row>
+                <Col id="projectCol">
+                    {projectList}
+                </Col>
+            </Row>
         )
 }
 

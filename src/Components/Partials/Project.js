@@ -9,16 +9,12 @@ import Button from 'react-bootstrap/Button';
 const Project = ({project}) => {
     let {id} = useParams();
     id = parseInt(id);
-    // const length = MyProjects.length;
-    
-    // const nextProject = ( id === length ? 1 : id + 1);
-    // const prevProject = (id === 1 ? length : id - 1);
 
         return(
             <Container>
                 <Row xs={12} style={{width:'90%'}}>
                     <Col>
-                        <a href={project.link} target="_blank"><img src={project.image} className="projImg"/></a>
+                        <a href={project.link} target="_blank"><img src={project.image} alt={project.name}/></a>
                     </Col>
                 </Row>
                 <Row xs={12} style={{width:'90%'}}>

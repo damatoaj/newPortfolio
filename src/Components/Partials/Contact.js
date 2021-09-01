@@ -9,53 +9,10 @@ const Contact = (props) => {
     const [buttonText, setButtonText] = useState('Submit');
     let splitText = new Array;
     const spanClass = useRef('standard')
-    console.log(spanClass)
     let char = 0;
     let str = 0;
     let words = ['Name:','Email:','Subject:','Message:'];
-        words.forEach(word => splitText.push(word.split('')))
-
-        for(let i = 0; i < splitText.length; i++) {
-            for(let j = 0; j < splitText[i].length; j++) {
-            }
-        }
-
-    // const animationSpan = useRef(null);
-    const textAnimation = (e) => {
-        splitText.forEach(word => {
-            for (let i = 0; i < word.length; i++) {
-                console.log(word[i])
-                spanClass.current = 'fade';
-                if (i === word.length) {
-                    complete(); 
-                    spanClass.current = 'standard';
-                    console.log(spanClass.current)
-                    return;
-                }
-            }
-            
-        })
-
-    };
     
-    let timer = setInterval(textAnimation, 50);
-    const complete = () => {
-        clearInterval(timer);
-        timer = null;
-    }
-    // let onTick = () => {
-        // console.log('tick')
-
-    // }
-  
-    const changeButtonText = (e) => {
-        setButtonText('Email Sent!')
-        setTimeout(
-            () => setButtonText('Submit'),
-            3000
-        );
-    }
-
     let sendEmail = (e) => {
         emailjs.sendForm('service_hdvtw0d', 'template_m329e48', e.target, 'user_SrWZljC6NSLBG1dPd91JE')
         .then((result) => {
@@ -68,8 +25,6 @@ const Contact = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        changeButtonText(e);
-        // textAnimation(e);
         sendEmail(e);
     };
 
@@ -80,9 +35,7 @@ const Contact = (props) => {
                     <Form.Group>
                         <Row>
                             <Form.Label htmlFor="name">
-                                {splitText[0].map(letter => {
-                                    return <span className={spanClass.current}>{letter}</span>
-                                })}
+                                Name
                             </Form.Label>
                         </Row>
                         <Row>
@@ -98,9 +51,7 @@ const Contact = (props) => {
                     <Form.Group>
                         <Row>
                             <Form.Label htmlFor="email">
-                                {splitText[1].map(letter => {
-                                    return <span >{letter}</span>
-                                })}
+                                Email
                             </Form.Label>
                         </Row>
                         <Row>
@@ -116,9 +67,7 @@ const Contact = (props) => {
                     <Form.Group>
                         <Row>
                             <Form.Label htmlFor="subject">
-                                {splitText[2].map(letter => {
-                                    return <span>{letter}</span>
-                                })}
+                                Subject
                             </Form.Label>
                         </Row>
                         <Row>
@@ -133,9 +82,7 @@ const Contact = (props) => {
                     </Form.Group>
                     <Form.Group>
                         <Form.Label htmlFor="message">
-                            {splitText[3].map(letter => {
-                                return <span>{letter}</span>
-                            })}
+                            Message
                         </Form.Label>
                         <Form.Control 
                             style={{width:'100%'}}

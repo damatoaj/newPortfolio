@@ -13,12 +13,12 @@ const About = (props) => {
     return(
         <Container>
             <Row>
-                <Image id="bigLogo" src={BigLogo} />
+                <Image id="bigLogo" src={BigLogo} alt="signature" />
             </Row>
             <Row  className="justify-content-md-center">
                 <Col></Col>
                 <Col>
-                    <Image id="headshot" src="/images/headshot.jpg" rounded/>
+                    <Image id="headshot" src="/images/headshot.jpg" alt="headshot" rounded/>
                 </Col>
                 <Col></Col>
             </Row>

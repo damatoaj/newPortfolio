@@ -1,5 +1,6 @@
 *{
   font-family: Germania One;
+  box-sizing: border-box;
 }
 
 a {
@@ -155,13 +156,10 @@ figcaption {
 }
 
 #footer {
-  background-color: #03242020;
-  color: gainsboro;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100vw;
-  font-family: Germania One;
   position: relative;
   z-index: 5;
   padding: 1rem;
@@ -169,10 +167,14 @@ figcaption {
 
 h1 {
   color: black;
-  text-decoration: underline ;
+  text-decoration: underline;
   background-color: gainsboro;
   padding: 2rem;
   border-radius: 3rem;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
 }
 
 h2 {
@@ -214,9 +216,6 @@ header {
 }
 
 #headshot:hover {
-  /* height:auto; */
-  /* width:70vw; */
-  /* margin: 10; */
   border-bottom: ridge .6vmax #f0f0f0;
   border-right: ridge .6vmax #f0f0f0;
   border-top: ridge .6vmax #f0f0f0;
@@ -437,15 +436,7 @@ ul {
   scroll-snap-align: start;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes rotate {
+  0% {transform: rotate(0deg); width: 0%;}
+  100% {transform: rotate(360deg); width: 100%;}
+}

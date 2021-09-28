@@ -39,6 +39,7 @@ a:focus {
   align-items: center;
   color: white;
   scroll-snap-align: start;
+  margin-top: 3rem;
 }
 
 .activeProject:nth-of-type(2n) h1 {
@@ -66,12 +67,6 @@ address {
   height:10vh;
   width:25vw;
   font-size: 1vw;
-}
-
-.arrows {
-  margin: 5vh;
-  padding: 2vmax;
-  text-align: center;
 }
 
 #articleLink {
@@ -110,20 +105,6 @@ button {
   background-color: gainsboro;
 }
 
-.card {
-  background-color: black;
-  border: 2px solid grey;
-  color: gainsboro;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  text-overflow: ellipsis;
-  padding: 3vmax;
-  width: 15vw;
-  height: 20vh;
-}
-
 #contact {
   background-color: slategray;
   padding: 1rem;
@@ -131,6 +112,7 @@ button {
   width: 50%;
   text-align: left;
   letter-spacing: .1rem;
+  transition:1s;
 }
 
 .contactLabel {
@@ -170,12 +152,6 @@ button {
   -.5rem -.5rem .5rem gainsboro;
 }
 
-figcaption {
-  font-size: 5vh;
-  color: black;
-  text-shadow: 1px 0px #f0f0f0, 0px 1px #f0f0f0, -1px 0px #f0f0f0, 0px -1px #f0f0f0;
-}
-
 #footer {
   display: flex;
   flex-direction: row;
@@ -197,35 +173,6 @@ h1 {
   animation-delay: 5s;
 }
 
-
-
-h2 {
-  margin: 3vmax;
-  padding: 3vmax;
-  color: gainsboro;
-  text-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;
-}
-
-h3 {
-  color: black;
-  text-shadow: 1px 0px #f0f0f0, 0px 1px #f0f0f0, -1px 0px #f0f0f0, 0px -1px #f0f0f0;
-}
-
-header {
-  background-color: #03242020;
-  color: gainsboro;
-  height: 10vh;
-  width: 99vw;
-  display: flex;
-  justify-content:right;
-  border-bottom: ridge 1vmax #f0f0f0;
-  border-right: ridge 1vmax #f0f0f0;
-  left: 0;
-  top: 0;
-  padding-bottom: 3%;
-  z-index: 5;
-}
-
 #headshot {
   height:auto;
   width:50vw;
@@ -243,17 +190,8 @@ header {
   border-top: ridge .6vmax #f0f0f0;
   border-left: ridge .6vmax #f0f0f0;
 }
-
-hr {
-  height: .5rem;
-  width: 100%;
-  background-image: url(https://www.featurepics.com/StockImage/20160414/birch-bark-texture-stock-image-4047180.jpg);
-  background-size: contain;
-  border: none;
-  margin:0;
-}
  
- img { 
+img { 
   display: inline-block;
   width: 100%;
 } 
@@ -269,30 +207,6 @@ input:focus {
   border:2px solid white;
 }
 
-legend {
-  font-size: 4vw;
-   color: white;
-   text-shadow: .1vmax 0 black, 0 .1vmax black, -.1vmax 0 black, 0 -.1vmax black; 
-}
-
-li {
-  color: black;
-  list-style-type: none;
-  padding: .5rem;
-}
-
-
-
-nav {
-  margin: 3% 3%;
-  font-size: 4vw;
-  font-family: Germania One;
-}
-
-.navLink {
-  color: gainsboro;
-}
-
 p {
   font-size: 3vw;
   color: gainsboro;
@@ -304,15 +218,6 @@ p {
   background-color: rgba(0, 0, 0, .4);
   white-space: pre-wrap;
 }
-
-.project {
-margin-bottom: 5;
-}
-
-.project.active {
-  margin-bottom: 5;
-  width: 100vh;
-  }
 
 .projectButton {
   width: 16vw;
@@ -331,43 +236,6 @@ margin-bottom: 5;
   background-color: black;
 }
 
-.projectButton:active {
-  transform: translate(0,20px);
-  transition: .5s ease;
-  color: white;
-  background-color: #03242020;
-}
-
-#projectCard{
-  padding:2rem;
-  font-size: x-large;
-  border-radius: 4rem;
-  box-shadow: 
-  .5rem .5rem .5rem gainsboro, 
-  .5rem -.5rem .5rem gainsboro,
-  -.5rem .5rem .5rem gainsboro,
-  -.5rem -.5rem .5rem gainsboro;
-}
-
-#projectCard.active{
-  z-index: 1;
-  padding:0;
-  width: 100vh;
-  height: auto;
-  font-size: x-large;
-  border-radius: 4rem;
-  box-shadow: 
-  .5rem .5rem .5rem gainsboro, 
-  .5rem -.5rem .5rem gainsboro,
-  -.5rem .5rem .5rem gainsboro,
-  -.5rem -.5rem .5rem gainsboro;
-}
-
-#projectCol {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 .projImg {
   opacity: 1;
   height: 40vh;
@@ -381,19 +249,10 @@ margin-bottom: 5;
   -.5rem -.5rem .5rem gainsboro;
 }
 
-
 .projectList {
   color: black;
   font-family: Germania One;
   height: 10vh;
-}
-
-.react-icons {
-  color: slategray;
-  width: 2em;
-  height: 2em;
-  background-color: gainsboro;
-  border-radius: 1rem;
 }
 
 .resume {
@@ -416,31 +275,6 @@ margin-bottom: 5;
   .5rem -.5rem .5rem gainsboro,
   -.5rem .5rem .5rem gainsboro,
   -.5rem -.5rem .5rem gainsboro;
-}
-
-.slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-  z-index: 1;
-  height: 1px;
-  margin: 0px;
-}
-
-.slide_active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
-  z-index: 5;
-  margin: 5vmax;
-}
-
-.slides {
-  height: auto;
-  width: 90%;
-  object-fit: contain;
-  margin: 10 auto;
-  padding: 10 auto;
-  border: 2px solid black;
 }
 
 .socialMedia {
@@ -466,17 +300,13 @@ span.fade {
   color: blue;
 }
 
-ul {
-  list-style-type: none;
-} 
-
 .trialDiv {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
 }
 
-.trialDiv section {
+.trialDiv > section {
   scroll-snap-align: start;
 }
 

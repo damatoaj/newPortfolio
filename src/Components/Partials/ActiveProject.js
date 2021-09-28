@@ -13,7 +13,7 @@ const rotateAnimation = (project) => {
 
 function ActiveProject({ project, index }) {
     return (
-        <Container className="activeProject">
+        <Container className="activeProject" key={index}>
             <Row xs={12} style={{width:'90%'}}>
                 {rotateAnimation(project)}
             </Row>

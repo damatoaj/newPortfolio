@@ -1,12 +1,10 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import BigLogo from "../../assests/Authur-logo-big.png";
 import DropdownButton from 'react-bootstrap/DropdownButton'
-import Dropdown  from 'react-bootstrap/Dropdown';
 
 
 const About = (props) => {
@@ -16,11 +14,11 @@ const About = (props) => {
                 <Image id="bigLogo" src={BigLogo} alt="signature" />
             </Row>
             <Row  className="justify-content-md-center">
-                <Col></Col>
+               
                 <Col>
                     <Image id="headshot" src="/images/headshot.jpg" alt="headshot" rounded/>
                 </Col>
-                <Col></Col>
+              
             </Row>
             <Row style={{width:'100%'}}>
                     <DropdownButton id="dropdown-item-button" title="About Me">                                
@@ -31,6 +29,9 @@ const About = (props) => {
                             Dedicated, resilient, creative; I am a valuable addition to any team environment.		
                         </p>
                     </DropdownButton>
+            </Row>
+            <Row>
+                <a className="resume" href='../../ArthurDAmatoResume.pdf' download>Download My Resume</a>
             </Row>
         </Container>
     )

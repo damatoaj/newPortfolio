@@ -41,6 +41,27 @@ a:focus {
   scroll-snap-align: start;
 }
 
+.activeProject:nth-of-type(2n) h1 {
+  background-color: black;
+  color: gainsboro;
+}
+
+.activeProject:nth-of-type(2n) p {
+  background-color: rgba(255, 255, 255, .4);
+  border-color: gainsboro;
+  color:black;
+  text-shadow: none;
+}
+
+.activeProject:nth-of-type(2n) a:hover,
+.activeProject:nth-of-type(2n) a:focus {
+  background-color: gainsboro;
+  opacity: .5;
+  cursor: pointer;
+  z-index:1;
+  border-radius: 1rem;
+}
+
 address {
   height:10vh;
   width:25vw;
@@ -173,9 +194,10 @@ h1 {
   border-radius: 3rem;
   animation-name: rotate;
   animation-duration: 2s;
-  animation-iteration-count: 1;
   animation-delay: 5s;
 }
+
+
 
 h2 {
   margin: 3vmax;

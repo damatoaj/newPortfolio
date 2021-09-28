@@ -5,11 +5,17 @@ import {
     Col
 } from 'react-bootstrap'
 
+const rotateAnimation = (project) => {
+    if (project) {
+        return <h1 style={{animationiteration:'1'}}>{project.title}</h1>
+    };
+};
+
 function ActiveProject({ project, index }) {
     return (
         <Container className="activeProject">
             <Row xs={12} style={{width:'90%'}}>
-                <h1>{project.title}</h1>
+                {rotateAnimation(project)}
             </Row>
             <Row xs={12} style={{width:'90%'}}>
                 <Col>

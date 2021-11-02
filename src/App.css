@@ -225,7 +225,6 @@ input:focus {
   outline:none;
   background-color: var(--primary-clr);
   color:var(--secondary-clr);
-  border:2px solid var(--fifth-clr);
 }
 
 p {
@@ -237,13 +236,12 @@ p {
   border: solid .2vmax var(--primary-clr);
   border-radius: 3vmax;
   background-color: rgba(0, 0, 0, .4);
-  var(--fifth-clr)-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 .projectButton {
   width: 16vw;
   border-radius: 2rem;
-
   border: solid .5rem var(--secondary-clr);
   transition: 1s;
 }

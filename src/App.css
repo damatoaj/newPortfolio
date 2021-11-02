@@ -3,6 +3,30 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-clr:#030327;
+  --secondary-clr:rgb(232, 236, 230);
+  --tertiary-clr:rgb(78, 77, 77);
+  --fourth-clr:rgb(184, 212, 221);
+  --fifth-clr:var(--fifth-clr)smoke;
+
+  --font-sz-reg: .5rem;
+  --font-sz-75: calc(var(--font-sz-reg)* .75);
+  --font-sz-50: calc(var(--font-sz-reg)* .5);
+  --font-sz-125: calc(var(--font-sz-reg)* 1.25);
+  --font-sz-15: calc(var(--font-sz-reg)* 1.5);
+
+  --mar-pad-reg: .5rem;
+  --mar-pad-sm: calc(var(--mar-pad-reg)*.75);
+  --mar-pad-xs: calc(var(--mar-pad-reg)*.5);
+  --mar-pad-lg: calc(var(--mar-pad-reg)*1.25);
+  --mar-pad-xl: calc(var(--mar-pad-reg)*1.5);
+
+  --bdr-rg: .1rem;
+  --bdr-sm: calc(var(--bdr-rg) * .75);
+  --bdr-lg: calc(var(--bdr-rg)*1.25);
+}
+
 a {
   display: inline-block;
   transition: 1s;
@@ -11,7 +35,7 @@ a {
 a:hover,
 a:focus {
   outline: none;
-  background-color: black;
+  background-color: var(--primary-clr);
   opacity: .5;
   cursor: pointer;
   z-index:1;
@@ -19,44 +43,40 @@ a:focus {
 }
 
 #aboutMe {
-  margin: 2rem;
-  color: gainsboro;
-  background-color: black;
+  margin: var(--mar-pad-xl);
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
   transition: 1s;
   padding: .5vw;
   width: 90%;
   box-shadow: 
-  .5rem .5rem .5rem gainsboro, 
-  .5rem -.5rem .5rem gainsboro,
-  -.5rem .5rem .5rem gainsboro,
-  -.5rem -.5rem .5rem gainsboro;
+  .5rem .5rem .5rem var(--secondary-clr), 
+  .5rem -.5rem .5rem var(--secondary-clr),
+  -.5rem .5rem .5rem var(--secondary-clr),
+  -.5rem -.5rem .5rem var(--secondary-clr);
 }
 
 .activeProject {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  color: var(--fifth-clr);
   scroll-snap-align: start;
-  margin-top: 3rem;
 }
 
 .activeProject:nth-of-type(2n) h1 {
-  background-color: black;
-  color: gainsboro;
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
 }
 
 .activeProject:nth-of-type(2n) p {
   background-color: rgba(255, 255, 255, .4);
-  border-color: gainsboro;
-  color:black;
-  text-shadow: .1vmax 0 white, 0 .1vmax white, -.1vmax 0 white, 0 -.1vmax white;
+  border-color: var(--secondary-clr);
+  color:var(--primary-clr);
+  text-shadow: .1vmax 0 var(--fifth-clr), 0 .1vmax var(--fifth-clr), -.1vmax 0 var(--fifth-clr), 0 -.1vmax var(--fifth-clr);
 }
 
 .activeProject:nth-of-type(2n) a:hover,
 .activeProject:nth-of-type(2n) a:focus {
-  background-color: gainsboro;
+  background-color: var(--secondary-clr);
   opacity: .5;
   cursor: pointer;
   z-index:1;
@@ -70,11 +90,11 @@ address {
 }
 
 #articleLink {
-  color:black;
+  color:var(--primary-clr);
 }
 
 #articleLink:hover {
-  color:slategray;
+  color:var(--tertiary-clr);
 }
 
 #bigLogo {
@@ -82,12 +102,11 @@ address {
 }
 
 body {
-  height: 100%;
   width: 100%;
+  height:100%;
   background-repeat: no-repeat;
-  padding: 10 auto;
+  padding: var(--mar-pad-reg);
   text-align: center;
-  z-index: 3;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(
@@ -101,13 +120,13 @@ body {
 button {
   height: 7vh;
   width: 12vw; 
-  color: black;
-  background-color: gainsboro;
+  color: var(--primary-clr);
+  background-color: var(--secondary-clr);
 }
 
 #contact {
   background-color: slategray;
-  padding: 1rem;
+  padding: var(--mar-pad-lg);
   border-radius: .5rem;
   width: 50%;
   text-align: left;
@@ -117,39 +136,41 @@ button {
 
 .contactLabel {
   text-decoration: underline;
-  margin-bottom: 2rem;
+  margin-bottom: var(--mar-pad-xl);
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  place-items: center;
 }
 
 #dropdown-item-button {
   width: 50%;
   height: 3rem;
   font-size: 2rem;
-  padding: .5rem;
-  margin-bottom: 3.5rem;
-  margin-top: 2rem;
-  border-radius: 2rem;
-  background-color: gainsboro;
-  color: black;
+  padding: var(--mar-pad-reg);
+  margin-bottom: var(--mar-pad-lg);
+  margin-top: var(--mar-pad-xl);
+  border-radius: var(--mar-pad-xl);
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
   transition: 1s;
 }
 
 #dropdown-item-button:hover,
 #dropdown-item-button:focus {
   outline: none;
-  color: gainsboro;
-  background-color: black;
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
   cursor: pointer;
   box-shadow: 
-  .5rem .5rem .5rem gainsboro, 
-  .5rem -.5rem .5rem gainsboro,
-  -.5rem .5rem .5rem gainsboro,
-  -.5rem -.5rem .5rem gainsboro;
+  .5rem .5rem .5rem var(--secondary-clr), 
+  .5rem -.5rem .5rem var(--secondary-clr),
+  -.5rem .5rem .5rem var(--secondary-clr),
+  -.5rem -.5rem .5rem var(--secondary-clr);
 }
 
 #footer {
@@ -159,14 +180,14 @@ button {
   width: 100vw;
   position: relative;
   z-index: 5;
-  padding: 1rem;
+  padding: var(--mar-pad-lg);
 }
 
 h1 {
-  color: black;
+  color: var(--primary-clr);
   text-decoration: underline;
-  background-color: gainsboro;
-  padding: 2rem;
+  background-color: var(--secondary-clr);
+  padding: var(--mar-pad-xl);
   border-radius: 3rem;
   animation-name: rotate;
   animation-duration: 2s;
@@ -177,7 +198,7 @@ h1 {
   height:auto;
   width:50vw;
   text-align: right;
-  margin: 20;
+  margin: calc(var(--mar-pad-reg) * 3);
   border-bottom: ridge .6vmax #f0f0f0;
   border-right: ridge .6vmax #f0f0f0;
   border-top: ridge .6vmax #f0f0f0;
@@ -202,29 +223,28 @@ input:hover,
 input:focus {
   cursor:pointer;
   outline:none;
-  background-color: black;
-  color:gainsboro;
-  border:2px solid white;
+  background-color: var(--primary-clr);
+  color:var(--secondary-clr);
+  border:2px solid var(--fifth-clr);
 }
 
 p {
   font-size: 3vw;
-  color: gainsboro;
-  text-shadow: .1vmax 0 black, 0 .1vmax black, -.1vmax 0 black, 0 -.1vmax black;
+  color: var(--secondary-clr);
+  text-shadow: .1vmax 0 var(--primary-clr), 0 .1vmax var(--primary-clr), -.1vmax 0 var(--primary-clr), 0 -.1vmax var(--primary-clr);
   margin: 1vmax;
   padding:1vmax;
-  border: solid .2vmax black;
+  border: solid .2vmax var(--primary-clr);
   border-radius: 3vmax;
   background-color: rgba(0, 0, 0, .4);
-  white-space: pre-wrap;
+  var(--fifth-clr)-space: pre-wrap;
 }
 
 .projectButton {
   width: 16vw;
   border-radius: 2rem;
-  margin-top: .5rem;
-  margin-bottom: 2rem;
-  border: solid .5rem gainsboro;
+
+  border: solid .5rem var(--secondary-clr);
   transition: 1s;
 }
 
@@ -232,34 +252,33 @@ p {
 .projectButton:focus {
   cursor:pointer;
   outline:none;
-  color:gainsboro;
-  background-color: black;
+  color:var(--secondary-clr);
+  background-color: var(--primary-clr);
 }
 
 .projImg {
   opacity: 1;
   height: 40vh;
   width: 50vw;
-  border: ridge black .5vw;
-  margin: 2rem;
+  border: ridge var(--primary-clr) .5vw;
+  margin: var(--mar-pad-xl);
   box-shadow: 
-  .5rem .5rem .5rem gainsboro, 
-  .5rem -.5rem .5rem gainsboro,
-  -.5rem .5rem .5rem gainsboro,
-  -.5rem -.5rem .5rem gainsboro;
+  .5rem .5rem .5rem var(--secondary-clr), 
+  .5rem -.5rem .5rem var(--secondary-clr),
+  -.5rem .5rem .5rem var(--secondary-clr),
+  -.5rem -.5rem .5rem var(--secondary-clr);
 }
 
 .projectList {
-  color: black;
-  font-family: Germania One;
+  color: var(--primary-clr);
   height: 10vh;
 }
 
 .resume {
-  color: black;
+  color: var(--primary-clr);
   font-size: 1.5rem;
-  background:gainsboro;
-  padding: 1rem;
+  background:var(--secondary-clr);
+  padding: var(--mar-pad-lg);
   border-radius: 1rem;
 }
 
@@ -267,24 +286,24 @@ p {
 .resumer:focus {
   outline: none;
   opacity: 1;
-  color: gainsboro;
-  background-color: black;
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
   cursor: pointer;
   box-shadow: 
-  .5rem .5rem .5rem gainsboro, 
-  .5rem -.5rem .5rem gainsboro,
-  -.5rem .5rem .5rem gainsboro,
-  -.5rem -.5rem .5rem gainsboro;
+  .5rem .5rem .5rem var(--secondary-clr), 
+  .5rem -.5rem .5rem var(--secondary-clr),
+  -.5rem .5rem .5rem var(--secondary-clr),
+  -.5rem -.5rem .5rem var(--secondary-clr);
 }
 
 .socialMedia {
   height: 8vh;
   width: 15vw;
-  margin: .2rem;
+  margin: var(--mar-pad-xs);
   padding: 0rem;
   border-radius: 2vmax;
-  border: solid .5vmax gainsboro;
-  background-color: gainsboro;
+  border: solid .5vmax var(--secondary-clr);
+  background-color: var(--secondary-clr);
 }
 
 #standard {

@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 const Footer = () => {
         return(
-            <Container id="footer">
+            <div id="footer">
                     <Row>
                         <a href="https://github.com/damatoaj" target="_blank">
                             <Image className="socialMedia" src="/images/github.svg" alt="GitHub"/>
@@ -20,7 +20,7 @@ const Footer = () => {
                             <Image className="socialMedia" src="/images/wordpress_logo.svg" alt="WordPress" />
                         </a>
                     </Row>    
-            </Container>
+            </div>
         )  
 }
 

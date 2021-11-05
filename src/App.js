@@ -18,12 +18,12 @@ const App = () => {
           <section>
             <About />
           </section>
-          <section>
+          
             <Route 
               path='/' 
               render={()=> <Projects myProjects={MyProjects}/>}
             />
-          </section>
+          
           <section>
             <Contact />  
             <Footer />

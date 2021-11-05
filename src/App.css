@@ -1,11 +1,11 @@
 *{
-  font-family: Germania One;
+  font-family: 'Alegreya', serif;
   box-sizing: border-box;
 }
 
 :root {
-  --primary-clr:#030327;
-  --secondary-clr:rgb(232, 236, 230);
+  --primary-clr:black;
+  --secondary-clr:rgb(255, 255, 255);
   --tertiary-clr:rgb(78, 77, 77);
   --fourth-clr:rgb(184, 212, 221);
   --fifth-clr:var(--fifth-clr)smoke;
@@ -60,6 +60,7 @@ a:focus {
   height: 100vh;
   color: var(--fifth-clr);
   scroll-snap-align: start;
+  place-content: center;
 }
 
 .activeProject:nth-of-type(2n) h1 {
@@ -68,7 +69,7 @@ a:focus {
 }
 
 .activeProject:nth-of-type(2n) p {
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, 0.7);
   border-color: var(--secondary-clr);
   color:var(--primary-clr);
   text-shadow: .1vmax 0 var(--fifth-clr), 0 .1vmax var(--fifth-clr), -.1vmax 0 var(--fifth-clr), 0 -.1vmax var(--fifth-clr);
@@ -98,7 +99,7 @@ address {
 }
 
 #bigLogo {
-  width: 80%;
+  width: 90%;
 }
 
 body {
@@ -115,6 +116,7 @@ body {
   ),
    url('./assests/nordicpeak.jpg');
   background-size: cover;
+  place-items: center;
 }
 
 button {
@@ -128,7 +130,7 @@ button {
   background-color: slategray;
   padding: var(--mar-pad-lg);
   border-radius: .5rem;
-  width: 50%;
+  width: 100%;
   text-align: left;
   letter-spacing: .1rem;
   transition:1s;
@@ -143,17 +145,16 @@ button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
-  place-items: center;
+  justify-content: space-evenly;
+  
+  height: 100vh;
 }
 
 #dropdown-item-button {
   width: 50%;
   height: 3rem;
   font-size: 2rem;
-  padding: var(--mar-pad-reg);
-  margin-bottom: var(--mar-pad-lg);
-  margin-top: var(--mar-pad-xl);
+  padding: var(--mar-pad-rg);
   border-radius: var(--mar-pad-xl);
   background-color: var(--secondary-clr);
   color: var(--primary-clr);
@@ -196,9 +197,8 @@ h1 {
 
 #headshot {
   height:auto;
-  width:50vw;
+  width:80%;
   text-align: right;
-  margin: calc(var(--mar-pad-reg) * 3);
   border-bottom: ridge .6vmax #f0f0f0;
   border-right: ridge .6vmax #f0f0f0;
   border-top: ridge .6vmax #f0f0f0;
@@ -235,7 +235,7 @@ p {
   padding:1vmax;
   border: solid .2vmax var(--primary-clr);
   border-radius: 3vmax;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .7);
   white-space: pre-wrap;
 }
 
@@ -256,8 +256,8 @@ p {
 
 .projImg {
   opacity: 1;
-  height: 40vh;
-  width: 50vw;
+  height: auto;
+  width: 80%;
   border: ridge var(--primary-clr) .5vw;
   margin: var(--mar-pad-xl);
   box-shadow: 
@@ -277,6 +277,7 @@ p {
   font-size: 1.5rem;
   background:var(--secondary-clr);
   padding: var(--mar-pad-lg);
+  margin-bottom: var(--mar-pad-reg);
   border-radius: 1rem;
 }
 
@@ -292,6 +293,11 @@ p {
   .5rem -.5rem .5rem var(--secondary-clr),
   -.5rem .5rem .5rem var(--secondary-clr),
   -.5rem -.5rem .5rem var(--secondary-clr);
+}
+
+section{
+  width:85%;
+  place-items: center;
 }
 
 .socialMedia {
@@ -321,10 +327,17 @@ span.fade {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  place-content: center;
 }
 
 .trialDiv > section {
   scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  place-items: center;
+  height: 100vh;
 }
 
 @keyframes rotate {

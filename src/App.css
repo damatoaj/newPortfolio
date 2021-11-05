@@ -7,7 +7,7 @@
   --primary-clr:black;
   --secondary-clr:rgb(255, 255, 255);
   --tertiary-clr:rgb(78, 77, 77);
-  --fourth-clr:rgb(184, 212, 221);
+  --fourth-clr:rgb(187, 147, 112);
   --fifth-clr:var(--fifth-clr)smoke;
 
   --font-sz-reg: 3vw;
@@ -57,7 +57,8 @@ a:focus {
 }
 
 .activeProject {
-  height: 100vh;
+  height: 80%;
+  width: 80%;
   color: var(--fifth-clr);
   scroll-snap-align: start;
   place-content: center;
@@ -72,6 +73,7 @@ a:focus {
   background-color: rgba(255, 255, 255, 0.7);
   border-color: var(--secondary-clr);
   color:var(--primary-clr);
+  
   text-shadow: .1vmax 0 var(--fifth-clr), 0 .1vmax var(--fifth-clr), -.1vmax 0 var(--fifth-clr), 0 -.1vmax var(--fifth-clr);
 }
 
@@ -190,9 +192,6 @@ h1 {
   background-color: var(--secondary-clr);
   padding: var(--mar-pad-xl);
   border-radius: 3rem;
-  animation-name: rotate;
-  animation-duration: 2s;
-  animation-delay: 5s;
   font-size: var(--font-sz-125);
 }
 
@@ -344,13 +343,6 @@ span.fade {
   width:90%;
 }
 
-
-
-@keyframes rotate {
-  0% {transform: rotate(0deg); width: 0%;}
-  100% {transform: rotate(360deg); width: 100%;}
-}
-
 @media only screen and (min-width: 1100px) {
   :root {
     --font-sz-reg: 2vw;
@@ -395,14 +387,7 @@ span.fade {
     border-left: ridge .6vmax #f0f0f0;
   }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width:100%;
-    height: 100vh;
-  }
+
 
   .trialDiv > section {
   scroll-snap-align: start;

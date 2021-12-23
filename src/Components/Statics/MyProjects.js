@@ -22,7 +22,7 @@ const MyProjects = [
         title: 'Exercise Volume Tracker',
         synopsis: 'A full-stack application using a Sequel database that allows users to track their volume (heart rate multiplied by minutes), and graph the data over time.',
         image: '/images/volume_tracker.png',
-        technologies: ['PostGres', 'HTML', 'CSS', 'JavaScript', 'React-Bootstrap', 'Recharts', 'Next.js', 'Bcrypt'],
+        technologies: ['PostGres', 'HTML', 'CSS', 'JavaScript', 'React-Bootstrap', 'Next.js'],
         link: 'https://cardio-volume-tracker.herokuapp.com/',
         nextSteps: ''
     },
@@ -31,7 +31,7 @@ const MyProjects = [
         title: 'Spotif-why?',
         synopsis: 'This app allows users to search from songs from the Spotify API and then save them into playlists.',
         image: '/images/spotifwhy.png',
-        technologies: ['MongoDB', 'React', 'Node.js', 'Express', 'Bcrypt'],
+        technologies: ['MongoDB', 'React', 'Node.js', 'Express'],
         link: 'https://spotify-project.netlify.app/',
         nextSteps: ''
     },
@@ -40,7 +40,7 @@ const MyProjects = [
         title: 'TRKR',
         synopsis: 'This app assists job hunters by syncing data across multiple job-board websites, and allows the user to store and track them all in one place.',
         image: '/images/TRKR.png',
-        technologies: ['React', 'GraphQL', 'Mongo', 'SQL'],
+        technologies: ['React', 'GraphQL', 'React-Bootstrap', 'SQL'],
         link: 'https://www.trkr.dev/',
         nextSteps: 'Fully connecting the back and front ends, and scaling for millions of users'
     }

@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import MyProjects from './Components/Statics/MyProjects';
 
-
-import Footer from './Components/Partials/Footer';
 import Contact from './Components/Partials/Contact';
 import About from './Components/Pages/About';
 import Projects from './Components/Pages/Projects';
@@ -26,7 +24,6 @@ const App = () => {
           
           <section>
             <Contact />  
-            <Footer />
           </section>
         </div>
       </Router>

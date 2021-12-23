@@ -1,19 +1,24 @@
 import React from 'react'
+import List from '../Partials/List'
 import {
     Container,
-    Row,
-    Col
+    Row
 } from 'react-bootstrap'
 
 
 function ActiveProject({ project, index }) {
     return (
         <Container className="activeProject" key={index}>
-            <h1>{project.title}</h1>
-                <a href={project.link} target="_blank"><img src={project.image} className="projImg"/></a>
+            <Row>
+                <h1>{project.title}</h1>
+                <a href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" className="projImg"/></a>
+            </Row>
+            <Row>
                 <p>{project.synopsis}</p>
-                <p>{project.technologies}</p>
-
+            </Row>
+            <Row>
+                <List technologies={project.technologies}/>
+            </Row>
         </Container> 
     )
 }

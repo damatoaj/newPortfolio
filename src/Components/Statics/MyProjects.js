@@ -20,7 +20,7 @@ const MyProjects = [
     {
         id: 3,
         title: 'Exercise Volume Tracker',
-        synopsis: 'A full-stack application using a Sequel database that allows users to track their volume (heart rate multiplied by minutes), and graph the data over time.',
+        synopsis: 'A full-stack application using an SQL database that allows users to track their volume (heart rate multiplied by minutes), and graph the data over time.',
         image: '/images/volume_tracker.png',
         technologies: ['PostGres', 'HTML', 'CSS', 'JavaScript', 'React-Bootstrap', 'Next.js'],
         link: 'https://cardio-volume-tracker.herokuapp.com/',

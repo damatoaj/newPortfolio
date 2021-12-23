@@ -4,10 +4,10 @@
 }
 
 :root {
-  --primary-clr:rgb(24, 24, 26);
-  --secondary-clr:rgb(255, 255, 255);
+  --primary-clr:rgb(24, 24, 26, .9);
+  --secondary-clr:rgb(245, 242, 242, .9);
   --tertiary-clr:rgb(24, 24, 26, .7);
-  --fourth-clr:rgb(187, 147, 112);
+  --fourth-clr:rgb(112, 128, 144, .9);
   --fifth-clr: rgb(255, 255, 255, .7);
 
   --font-sz-reg: 3vw;
@@ -50,11 +50,11 @@ a:focus {
   transition: 1s;
   padding: .5vw;
   width: 90%;
-  box-shadow: 
+  /* box-shadow: 
   .5rem .5rem .5rem var(--secondary-clr), 
   .5rem -.5rem .5rem var(--secondary-clr),
   -.5rem .5rem .5rem var(--secondary-clr),
-  -.5rem -.5rem .5rem var(--secondary-clr);
+  -.5rem -.5rem .5rem var(--secondary-clr); */
 }
 
 .activeProject {
@@ -62,7 +62,6 @@ a:focus {
   margin-bottom: calc(var(--mar-pad-xl) * 3);
   padding: var(--mar-pad-sm);
   width: 80%;
-  color: var(--fifth-clr);
   scroll-snap-align: center;
   place-content: center;
   background-color: var(--tertiary-clr);
@@ -72,16 +71,18 @@ a:focus {
 .activeProject h1, 
 .activeProject h2,
 .activeProject p,
-.activeProject ul {
-  background-color: var(--secondary-clr);
+.activeProject ul,
+.activeProject #list {
+  
   color: var(--primary-clr);
+
 }
 
-.activeProject:nth-of-type(2n) {
+/* .activeProject:nth-of-type(2n) {
   background-color: var(--fifth-clr);
-}
+} */
 
-.activeProject:nth-of-type(2n) .projImg {
+/* .activeProject:nth-of-type(2n) .projImg {
   border: ridge var(--secondary-clr) .5vw;
   box-shadow: 
   .5rem .5rem .5rem var(--primary-clr), 
@@ -96,7 +97,7 @@ a:focus {
 .activeProject:nth-of-type(2n) ul {
   background-color: var(--primary-clr);
   color: var(--secondary-clr);
-}
+} */
 
 /* .activeProject:nth-of-type(2n) p,
 .activeProject:nth-of-type(2n) ul {
@@ -106,7 +107,7 @@ a:focus {
   text-shadow: .1vmax 0 var(--fifth-clr), 0 .1vmax var(--fifth-clr), -.1vmax 0 var(--fifth-clr), 0 -.1vmax var(--fifth-clr);
 } */
 
-.activeProject:nth-of-type(2n) a:hover,
+/* .activeProject:nth-of-type(2n) a:hover,
 .activeProject:nth-of-type(2n) a:focus,
 .activeProject:nth-of-type(2n) .projImg:focus,
 .activeProject:nth-of-type(2n) .projImg:focus {
@@ -114,7 +115,7 @@ a:focus {
   opacity: .5;
   cursor: pointer;
   z-index:1;
-}
+} */
 
 address {
   height:10vh;
@@ -132,6 +133,7 @@ address {
 
 #bigLogo {
   width: 90%;
+  background-color: var(--primary-clr);
 }
 
 body {
@@ -139,32 +141,31 @@ body {
   background-repeat: no-repeat;  
   text-align: center;
   background-image: linear-gradient(
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0)
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.1)
   ),
    url('./assests/nordicpeak.jpg');
   background-size: cover;
 }
 
 button {
-  height: 7vh;
-  width: 12vw; 
+  width: 30%; 
   color: var(--primary-clr);
   background-color: var(--secondary-clr);
 }
 
 #contact {
-  background-color: slategray;
+  background-color: var(--fourth-clr);
   padding: var(--mar-pad-lg);
-  border-radius: .5rem;
   width: 100%;
   text-align: left;
   letter-spacing: .1rem;
-  transition:1s;
+  font-size: var(--font-sz-125);
 }
 
 .contactLabel {
   text-decoration: underline;
+  font-size: var(--font-sz-150);
   margin-bottom: var(--mar-pad-xl);
 }
 
@@ -175,74 +176,22 @@ button {
   height: 100vh;
 }
 
-#dropdown-item-button {
-  width: 50%;
-  height: 3rem;
-  font-size: 2rem;
-  padding: var(--mar-pad-rg);
-  border-radius: var(--mar-pad-xl);
-  background-color: var(--secondary-clr);
-  color: var(--primary-clr);
-  transition: 1s;
-}
-
-#dropdown-item-button:hover,
-#dropdown-item-button:focus {
-  outline: none;
-  color: var(--secondary-clr);
-  background-color: var(--primary-clr);
-  cursor: pointer;
-  box-shadow: 
-  .5rem .5rem .5rem var(--secondary-clr), 
-  .5rem -.5rem .5rem var(--secondary-clr),
-  -.5rem .5rem .5rem var(--secondary-clr),
-  -.5rem -.5rem .5rem var(--secondary-clr);
-}
-
 form {
   font-size: var(--font-sz-reg);
 }
 
-#footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100vw;
-  position: relative;
-  z-index: 5;
-  padding: var(--mar-pad-lg);
-}
-
 h1 {
   color: var(--primary-clr);
-  text-decoration: underline;
   background-color: var(--secondary-clr);
   padding: var(--mar-pad-xl);
-  border-radius: 3rem;
   font-size: var(--font-sz-125);
 }
 
 h2 {
   font-size: var(--font-sz-reg);
-  border-radius: var(--mar-pad-reg);
   width: 50%;
-}
-
-#headshot {
-  height:auto;
-  width:80%;
-  text-align: right;
-  border-bottom: ridge .6vmax #f0f0f0;
-  border-right: ridge .6vmax #f0f0f0;
-  border-top: ridge .6vmax #f0f0f0;
-  border-left: ridge .6vmax #f0f0f0;
-}
-
-#headshot:hover {
-  border-bottom: ridge .6vmax #f0f0f0;
-  border-right: ridge .6vmax #f0f0f0;
-  border-top: ridge .6vmax #f0f0f0;
-  border-left: ridge .6vmax #f0f0f0;
+  text-align: left;
+  padding-left: var(--mar-pad-reg);
 }
  
 img { 
@@ -250,9 +199,20 @@ img {
   width: 100%;
 } 
 
+input,
+textarea {
+  transition: all 1s ease-out;
+  font-size: var(--font-sz-reg);
+  padding: var(--mar-pad-reg);
+}
+
+#list {
+  background-color: var(--secondary-clr);
+}
 li {
   list-style-type: none;
   font-size: var(--font-sz-75);
+  margin-bottom: var(--mar-pad-reg);
 }
 
 
@@ -264,23 +224,18 @@ input:focus {
   outline:none;
   background-color: var(--primary-clr);
   color:var(--secondary-clr);
+  transition: all 1s ease-in-out;
 }
 
 p {
   color: var(--secondary-clr);
-  margin: 1vmax;
-  padding:1vmax;
-  border: solid .2vmax var(--primary-clr);
-  border-radius: 3vmax;
-  background-color: rgba(0, 0, 0, .7);
-  white-space: pre-wrap;
-  font-size: var(--font-sz-75);
+  padding: var(--mar-pad-xs);
+  background-color: var(--secondary-clr);
+  font-size: var(--font-sz-reg);
 }
 
 .projectButton {
-  width: 16vw;
-  border-radius: 2rem;
-  border: solid .5rem var(--secondary-clr);
+  border-radius: 1rem;
   transition: 1s;
   font-size: var(--font-sz-reg);
 }
@@ -289,22 +244,20 @@ p {
 .projectButton:focus {
   cursor:pointer;
   outline:none;
-
   color:var(--secondary-clr);
   background-color: var(--primary-clr);
-}
-
-.projImg {
-  opacity: 1;
-  height: auto;
-  width: 80%;
-  border: ridge var(--primary-clr) .5vw;
-  margin: var(--mar-pad-xl);
   box-shadow: 
   .5rem .5rem .5rem var(--secondary-clr), 
   .5rem -.5rem .5rem var(--secondary-clr),
   -.5rem .5rem .5rem var(--secondary-clr),
   -.5rem -.5rem .5rem var(--secondary-clr);
+}
+
+.projImg {
+  opacity: 1;
+  height: auto;
+  width: 100%;
+  border: solid var(--primary-clr) .5vw;
 }
 
 .projectList {
@@ -314,11 +267,10 @@ p {
 
 .resume {
   color: var(--primary-clr);
-  font-size: var(--font-sz-reg);
+  font-size: var(--font-sz-150);
   background:var(--secondary-clr);
   padding: var(--mar-pad-xl);
   margin-bottom: var(--mar-pad-reg);
-  border-radius: 1rem;
 }
 
 .resume:hover,
@@ -333,16 +285,6 @@ p {
   .5rem -.5rem .5rem var(--secondary-clr),
   -.5rem .5rem .5rem var(--secondary-clr),
   -.5rem -.5rem .5rem var(--secondary-clr);
-}
-
-.socialMedia {
-  height: 8vh;
-  width: 15vw;
-  margin: var(--mar-pad-xs);
-  padding: 0rem;
-  border-radius: 2vmax;
-  border: solid .5vmax var(--secondary-clr);
-  background-color: var(--secondary-clr);
 }
 
 #standard {
@@ -379,7 +321,6 @@ ul {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0;
-  border-radius: var(--mar-pad-sm);
 }
 
 @media only screen and (min-width: 1100px) {
@@ -401,11 +342,11 @@ ul {
     width: 50%;
     border: ridge var(--primary-clr) .5vw;
     margin: var(--mar-pad-xl);
-    box-shadow: 
+    /* box-shadow: 
     .5rem .5rem .5rem var(--secondary-clr), 
     .5rem -.5rem .5rem var(--secondary-clr),
     -.5rem .5rem .5rem var(--secondary-clr),
-    -.5rem -.5rem .5rem var(--secondary-clr);
+    -.5rem -.5rem .5rem var(--secondary-clr); */
   }
 
   /* .trialDiv > section {

@@ -13,9 +13,12 @@ const About = (props) => {
             </Row>
             <Row>
                 <p id="aboutMe">
-                    An experienced educator and coach, 
-                    I bring collaborative leadership to my teams by facilitating direct communication, managing goals/expectations, and being process oriented. 
+                    An experienced educator and coach,
+                    <br/>
+                    I bring collaborative leadership to my teams by facilitating direct communication, managing goals/expectations, and being process oriented.
+                    <br/>
                     With my background in kinesiology and philosophy, I am equipped with critical thinking and problem solving skills, which deliver excellent outcomes for clients and teammates.
+                    <br/>
                     Dedicated, resilient, creative; I am a valuable addition to any team environment.		
                 </p>
             </Row>

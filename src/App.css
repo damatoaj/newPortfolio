@@ -46,6 +46,7 @@ a:focus {
   margin: var(--mar-pad-xl);
   color: var(--secondary-clr);
   background-color: var(--primary-clr);
+  font-size: var(--font-sz-reg);
   transition: 1s;
   padding: .5vw;
   width: 90%;
@@ -198,6 +199,10 @@ button {
   -.5rem -.5rem .5rem var(--secondary-clr);
 }
 
+form {
+  font-size: var(--font-sz-reg);
+}
+
 #footer {
   display: flex;
   flex-direction: row;
@@ -277,6 +282,7 @@ p {
   border-radius: 2rem;
   border: solid .5rem var(--secondary-clr);
   transition: 1s;
+  font-size: var(--font-sz-reg);
 }
 
 .projectButton:hover,
@@ -308,9 +314,9 @@ p {
 
 .resume {
   color: var(--primary-clr);
-  font-size: 1.5rem;
+  font-size: var(--font-sz-reg);
   background:var(--secondary-clr);
-  padding: var(--mar-pad-lg);
+  padding: var(--mar-pad-xl);
   margin-bottom: var(--mar-pad-reg);
   border-radius: 1rem;
 }
@@ -378,23 +384,15 @@ ul {
 
 @media only screen and (min-width: 1100px) {
   :root {
-    --font-sz-reg: 2vw;
+    --font-sz-reg: 1.5vw;
   }
+
   .activeProject {
-    height: 100vh;
-    color: var(--fifth-clr);
-    scroll-snap-align: start;
-    place-content: center;
-    
+    width: 60%;
   }
 
   #bigLogo {
     width: 60%;
-  }
-
-  section{
-    width:65%;
-    place-items: center;
   }
 
   .projImg {
@@ -410,19 +408,7 @@ ul {
     -.5rem -.5rem .5rem var(--secondary-clr);
   }
 
-  #headshot {
-    height:auto;
-    width:60%;
-    text-align: right;
-    border-bottom: ridge .6vmax #f0f0f0;
-    border-right: ridge .6vmax #f0f0f0;
-    border-top: ridge .6vmax #f0f0f0;
-    border-left: ridge .6vmax #f0f0f0;
-  }
-
-
-
-  .trialDiv > section {
+  /* .trialDiv > section {
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -430,7 +416,7 @@ ul {
   justify-content: center;
   place-items: center;
   height: 100vh;
-}
+} */
 
 
 }

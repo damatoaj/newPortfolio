@@ -7,7 +7,7 @@ import BigLogo from "../../assests/Authur-logo-big.png";
 
 const About = (props) => {
     return(
-        <Container>
+        <Container id="about">
             <Row>
                 <Image id="bigLogo" src={BigLogo} alt="signature" />
             </Row>

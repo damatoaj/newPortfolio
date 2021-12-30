@@ -8,7 +8,7 @@ import {
 
 function ActiveProject({ project, index }) {
     return (
-        <Container className="activeProject" key={index}>
+        <Container className="activeProject" key={index} id={project.title}>
             <Row>
                 <h1>{project.title}</h1>
                 <a href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" className="projImg"/></a>

@@ -6,12 +6,14 @@ import MyProjects from './Components/Statics/MyProjects';
 import Contact from './Components/Partials/Contact';
 import About from './Components/Pages/About';
 import Projects from './Components/Pages/Projects';
+import Navigation from  './Components/Partials/Nav';
 
 
 
 const App = () => {
     return(
       <Router>
+        <Navigation />
         <div className="trialDiv">
           <section>
             <About />

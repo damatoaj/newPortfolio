@@ -29,7 +29,7 @@ const Contact = (props) => {
     };
 
     return( 
-        <Container>
+        <Container id="contact-me">
                 <Form onSubmit={handleSubmit} id="contact">
                     <Form.Label className="contactLabel">Contact Me Below</Form.Label>
                     <Form.Group>

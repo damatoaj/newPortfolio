@@ -1,6 +1,8 @@
 *{
   font-family: 'Alegreya', serif;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -27,13 +29,14 @@
   --bdr-lg: calc(var(--bdr-rg)*1.25);
 }
 
-a {
+.activeProject > a {
   display: inline-block;
   transition: 1s;
+  width: 60%;
 }
 
-a:hover,
-a:focus {
+.activeProject > a:hover,
+.activeProject > a:focus {
   outline: none;
   background-color: var(--primary-clr);
   opacity: .5;
@@ -50,11 +53,6 @@ a:focus {
   transition: 1s;
   padding: .5vw;
   width: 90%;
-  /* box-shadow: 
-  .5rem .5rem .5rem var(--secondary-clr), 
-  .5rem -.5rem .5rem var(--secondary-clr),
-  -.5rem .5rem .5rem var(--secondary-clr),
-  -.5rem -.5rem .5rem var(--secondary-clr); */
 }
 
 .activeProject {
@@ -66,6 +64,14 @@ a:focus {
   place-content: center;
   background-color: var(--tertiary-clr);
   border-radius: var(--mar-pad-xs);
+  height:100vh;
+}
+
+.activeProject.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:100vh;
 }
 
 .activeProject h1, 
@@ -73,7 +79,7 @@ a:focus {
 .activeProject p,
 .activeProject ul,
 .activeProject #list {
-  
+  margin: var(--mar-pad-xl);
   color: var(--primary-clr);
 
 }
@@ -117,20 +123,6 @@ a:focus {
   z-index:1;
 } */
 
-address {
-  height:10vh;
-  width:25vw;
-  font-size: 1vw;
-}
-
-#articleLink {
-  color:var(--primary-clr);
-}
-
-#articleLink:hover {
-  color:var(--tertiary-clr);
-}
-
 #bigLogo {
   width: 90%;
   background-color: var(--primary-clr);
@@ -141,14 +133,14 @@ body {
   background-repeat: no-repeat;  
   text-align: center;
   background-image: linear-gradient(
-    rgba(0,0,0,0),
-    rgba(0,0,0,0.1)
+    rgba(0,0,0,.4),
+    rgba(0,0,0,.4)
   ),
    url('./assests/nordicpeak.jpg');
   background-size: cover;
 }
 
-button {
+.trialDiv > button {
   width: 30%; 
   color: var(--primary-clr);
   background-color: var(--secondary-clr);
@@ -173,7 +165,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100vh;
+  height:100vh;
 }
 
 form {
@@ -209,12 +201,12 @@ textarea {
 #list {
   background-color: var(--secondary-clr);
 }
+
 li {
   list-style-type: none;
   font-size: var(--font-sz-75);
   margin-bottom: var(--mar-pad-reg);
 }
-
 
 textarea:hover,
 textarea:focus,
@@ -226,6 +218,65 @@ input:focus {
   color:var(--secondary-clr);
   transition: all 1s ease-in-out;
 }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  background-color: var(--tertiary-clr);
+}
+
+nav > a,
+nav > #dropwdown {
+  margin: var(--mar-pad-reg);
+  font-size: var(--font-sz-reg);
+  color: var(--secondary-clr);
+}
+
+nav > a {
+  font-size: var(--font-sz-reg);
+  color: var(--secondary-clr);
+  text-decoration: none;
+}
+
+nav > a:hover {
+  background-color: var(--fourth-clr);
+}
+
+#dropdown {
+  position: relative;
+  display: inline-block;
+  padding: var(--mar-pad-reg);
+}
+
+#dropdownBtn {
+  color: var(--secondary-clr);  
+  border: none;
+  font-size: var(--font-sz-reg);
+}
+
+#dropdownLinks {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#dropdownLinks a {
+  color: black;
+  padding: var(--mar-pad-reg);
+  text-decoration: none;
+  display: block;
+}
+
+#dropdownLinks a:hover {background-color: #ddd;}
+
+#dropdown:hover #dropdownLinks {display: block;}
+
+#dropdown:hover #dropdownBtn {background-color: var(--fourth-clr);}
+
 
 p {
   color: var(--secondary-clr);
@@ -311,8 +362,8 @@ span.fade {
 
 .trialDiv > section {
   scroll-snap-align: start;
-  height: 100vh;
   width:90%;
+  height: 100vh;
 }
 
 ul {

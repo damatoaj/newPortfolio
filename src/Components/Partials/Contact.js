@@ -1,18 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import emailjs from 'emailjs-com';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
-const Contact = (props) => {
-    const [buttonText, setButtonText] = useState('Submit');
-    let splitText = new Array;
-    const spanClass = useRef('standard')
-    let char = 0;
-    let str = 0;
-    let words = ['Name:','Email:','Subject:','Message:'];
-    
+const Contact = () => {
     let sendEmail = (e) => {
         emailjs.sendForm('service_hdvtw0d', 'template_m329e48', e.target, 'user_SrWZljC6NSLBG1dPd91JE')
         .then((result) => {
@@ -98,11 +91,11 @@ const Contact = (props) => {
                         type="submit"
                         active
                     >
-                        {buttonText}
+                        Submit
                     </Button>
                 </Form>
         </Container>
     )
-}
+};
 
 export default Contact;

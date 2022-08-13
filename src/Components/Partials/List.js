@@ -1,12 +1,10 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const List = ({technologies}) => {
-    console.log(technologies, 'the technologeis')
     let techList = technologies.map((tech,index) => {
         return <li key={index}>{'|'}{tech}</li>
     })
-
-    console.log(techList, 'this is the techList')
 
     return(
         <div id="list">
@@ -16,7 +14,10 @@ const List = ({technologies}) => {
             </ul>
         </div>
     )
-   
-}
+};
 
-export default List
+List.propTypes = {
+    technologies: PropTypes.array.isRequired
+};
+
+export default List;

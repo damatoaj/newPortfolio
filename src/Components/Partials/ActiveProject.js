@@ -1,9 +1,10 @@
 import React from 'react'
-import List from '../Partials/List'
+import List from '../Partials/List';
 import {
     Container,
     Row
-} from 'react-bootstrap'
+} from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 
 function ActiveProject({ project, index }) {
@@ -11,7 +12,7 @@ function ActiveProject({ project, index }) {
         <Container className="activeProject" key={index} id={project.title}>
             <Row>
                 <h1>{project.title}</h1>
-                <a href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt="" className="projImg"/></a>
+                <a href={project.link} target="_blank" rel="noreferrer"><img src={project.image} alt={`Screenshot of ${project.title}`} className="projImg"/></a>
             </Row>
             <Row>
                 <p>{project.synopsis}</p>
@@ -21,6 +22,11 @@ function ActiveProject({ project, index }) {
             </Row>
         </Container> 
     )
-}
+};
 
-export default ActiveProject
+ActiveProject.propTypes = {
+    index: PropTypes.number.isRequired,
+    project: PropTypes.object.isRequired
+};
+
+export default ActiveProject;

@@ -5,7 +5,7 @@ const MyProjects = [
         synopsis: `This API app is designed to allow users to query the FDA's food database, and then use it to construct different recipes.`,
         image: '/images/Lunch.png',
         technologies: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Axios', 'Node.js'],
-        link: 'https://reddev14-lunch-recipes-2.herokuapp.com/',
+        link: 'https://lunch-project-2-ga.herokuapp.com/',
         nextSteps: ''
     },
     {

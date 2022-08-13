@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import BigLogo from "../../assests/Authur-logo-big.png";
 
 
-const About = (props) => {
+const About = () => {
     return(
         <Container id="about">
             <Row>
@@ -23,7 +23,7 @@ const About = (props) => {
                 </p>
             </Row>
             <Row>
-                <a className="resume" href='../../ArthurDAmatoResume.pdf' download>Download My Resume</a>
+                <a className="resume" href='../../Arthur_Damato_resume_2022.docx.pdf' download>Download My Resume</a>
             </Row>
         </Container>
     )
